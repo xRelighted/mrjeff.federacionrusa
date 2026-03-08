@@ -1,499 +1,309 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mr Jeff Paraguay</title>
-    <link rel="icon" type="image/jpeg" href="/favicon.jpg">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mr Jeff Paraguay</title>
 
-        body {
-            background-color: #f0f9ff; /* celeste muy claro */
-            color: #0a2a44; /* azul marino para textos */
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
+<style>
 
-        /* Animaciones globales */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Inter,system-ui,Arial;
+}
 
-        section {
-            animation: fadeInUp 1s ease-out;
-        }
+body{
+background:#ffffff;
+color:#111;
+}
 
-        /* Encabezado */
-        header {
-            background: linear-gradient(135deg, #0a2a44, #1e4a6b);
-            color: white;
-            padding: 1rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            box-shadow: 0 4px 20px rgba(0, 119, 190, 0.3);
-        }
+/* NAVBAR */
 
-        .logo h1 {
-            font-size: 2rem;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-            background: linear-gradient(135deg, #fff, #b3e0ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
+header{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:20px 6%;
+background:white;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
 
-        .logo p {
-            font-size: 0.9rem;
-            color: #a3d8ff;
-        }
+.logo{
+font-weight:700;
+font-size:22px;
+}
 
-        nav ul {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
+nav{
+display:flex;
+gap:30px;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s;
-            padding-bottom: 5px;
-            border-bottom: 2px solid transparent;
-        }
+nav a{
+text-decoration:none;
+color:#444;
+font-weight:500;
+}
 
-        nav a:hover {
-            border-bottom-color: #6ab0ff;
-            color: #d4f0ff;
-        }
+.nav-buttons{
+display:flex;
+gap:12px;
+}
 
-        /* Hero */
-        .hero {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 4rem 5%;
-            background: radial-gradient(circle at 10% 30%, #d4f0ff, #ffffff);
-            min-height: 80vh;
-        }
+.btn-primary{
+background:#2f80ed;
+color:white;
+padding:12px 22px;
+border-radius:6px;
+font-weight:600;
+text-decoration:none;
+}
 
-        .hero-content {
-            flex: 1;
-            animation: fadeInUp 1.2s;
-        }
+.btn-secondary{
+background:#4da3ff;
+color:white;
+padding:12px 22px;
+border-radius:6px;
+font-weight:600;
+text-decoration:none;
+}
 
-        .hero-content h2 {
-            font-size: 3.5rem;
-            line-height: 1.2;
-            color: #0a2a44;
-            margin-bottom: 1rem;
-        }
+/* HERO */
 
-        .hero-content h2 span {
-            color: #1e6f9f;
-            display: inline-block;
-            animation: pulse 2s infinite;
-        }
+.hero{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:80px 6%;
+gap:60px;
+}
 
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
+.hero-left{
+max-width:600px;
+}
 
-        .hero-content p {
-            font-size: 1.2rem;
-            color: #2c3e50;
-            margin-bottom: 2rem;
-            max-width: 600px;
-        }
+.hero-left h1{
+font-size:56px;
+line-height:1.1;
+font-weight:800;
+margin-bottom:20px;
+}
 
-        .btn {
-            display: inline-block;
-            background: #0a2a44;
-            color: white;
-            padding: 0.8rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
-            border: 2px solid transparent;
-            box-shadow: 0 4px 15px rgba(10, 42, 68, 0.3);
-        }
+.hero-left span{
+color:#2f80ed;
+}
 
-        .btn:hover {
-            background: white;
-            color: #0a2a44;
-            border-color: #0a2a44;
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(10, 42, 68, 0.4);
-        }
+.hero-buttons{
+display:flex;
+gap:15px;
+margin-top:30px;
+}
 
-        .hero-image {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            animation: float 4s ease-in-out infinite;
-        }
+.hero-right img{
+width:420px;
+border-radius:20px;
+box-shadow:0 15px 40px rgba(0,0,0,0.15);
+}
 
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-            100% { transform: translateY(0px); }
-        }
+/* SERVICES */
 
-        .hero-image svg {
-            width: 80%;
-            max-width: 400px;
-            filter: drop-shadow(0 10px 20px rgba(0, 160, 255, 0.3));
-        }
+.services{
+padding:100px 6%;
+background:#f7fbff;
+text-align:center;
+}
 
-        /* Sección servicios */
-        .services {
-            padding: 5rem 5%;
-            background: white;
-            text-align: center;
-        }
+.services h2{
+font-size:36px;
+margin-bottom:10px;
+}
 
-        .services h3 {
-            font-size: 2.5rem;
-            color: #0a2a44;
-            margin-bottom: 1rem;
-        }
+.cards{
+margin-top:50px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+}
 
-        .services > p {
-            color: #1e4a6b;
-            margin-bottom: 3rem;
-            font-size: 1.1rem;
-        }
+.card{
+background:white;
+padding:40px 25px;
+border-radius:16px;
+box-shadow:0 10px 30px rgba(0,0,0,0.06);
+}
 
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
+.card h3{
+margin-top:10px;
+margin-bottom:8px;
+}
 
-        .card {
-            background: #f4f9ff;
-            border-radius: 20px;
-            padding: 2.5rem 1.5rem;
-            transition: all 0.3s;
-            border: 1px solid rgba(0, 160, 255, 0.1);
-            box-shadow: 0 10px 30px rgba(0, 50, 100, 0.05);
-        }
+/* CONTACT */
 
-        .card:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 20px 40px rgba(0, 119, 190, 0.2);
-            border-color: #6ab0ff;
-        }
+.contact{
+padding:100px 6%;
+background:#0a2a44;
+color:white;
+text-align:center;
+}
 
-        .card-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
+.contact h2{
+font-size:34px;
+margin-bottom:15px;
+}
 
-        .card h4 {
-            font-size: 1.5rem;
-            color: #0a2a44;
-            margin-bottom: 0.8rem;
-        }
+.contact-box{
+margin-top:40px;
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+}
 
-        .card p {
-            color: #2c3e50;
-        }
+.contact-item{
+background:rgba(255,255,255,0.1);
+padding:18px 28px;
+border-radius:40px;
+}
 
-        /* Beneficios */
-        .benefits {
-            padding: 4rem 5%;
-            background: linear-gradient(135deg, #e6f4ff, #ffffff);
-            display: flex;
-            align-items: center;
-            gap: 3rem;
-            flex-wrap: wrap;
-        }
+footer{
+background:#051b30;
+color:#9ec9ff;
+text-align:center;
+padding:25px;
+font-size:14px;
+}
 
-        .benefits-text {
-            flex: 1;
-        }
+/* RESPONSIVE */
 
-        .benefits-text h3 {
-            font-size: 2.5rem;
-            color: #0a2a44;
-            margin-bottom: 1.5rem;
-        }
+@media (max-width:900px){
 
-        .benefits-list {
-            list-style: none;
-        }
+.hero{
+flex-direction:column;
+text-align:center;
+}
 
-        .benefits-list li {
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-        }
+.hero-left h1{
+font-size:40px;
+}
 
-        .benefits-list li::before {
-            content: "✓";
-            background: #1e6f9f;
-            color: white;
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-        }
+.hero-right img{
+width:90%;
+}
 
-        .benefits-image {
-            flex: 1;
-            text-align: center;
-        }
+nav{
+display:none;
+}
 
-        .benefits-image svg {
-            width: 80%;
-            max-width: 350px;
-        }
+}
 
-        /* Contacto */
-        .contact {
-            padding: 4rem 5%;
-            background: #0a2a44;
-            color: white;
-            text-align: center;
-        }
-
-        .contact h3 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: white;
-        }
-
-        .contact p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            color: #b3e0ff;
-        }
-
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            flex-wrap: wrap;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-            font-size: 1.2rem;
-            background: rgba(255,255,255,0.1);
-            padding: 1rem 2rem;
-            border-radius: 60px;
-            transition: 0.3s;
-            border: 1px solid rgba(255,255,255,0.2);
-        }
-
-        .contact-item:hover {
-            background: white;
-            color: #0a2a44;
-            transform: scale(1.05);
-        }
-
-        .contact-item span {
-            font-size: 1.5rem;
-        }
-
-        /* Footer */
-        footer {
-            background: #05203c;
-            color: #a3d8ff;
-            text-align: center;
-            padding: 2rem;
-            font-size: 0.95rem;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero {
-                flex-direction: column;
-                text-align: center;
-                gap: 2rem;
-            }
-
-            .hero-content h2 {
-                font-size: 2.5rem;
-            }
-
-            header {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            nav ul {
-                gap: 1rem;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .benefits {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .benefits-list li {
-                justify-content: center;
-            }
-        }
-    </style>
+</style>
 </head>
+
 <body>
-    <header>
-        <div class="logo">
-            <h1>Mr Jeff</h1>
-            <p>📍 Federación Rusa 1247 casi San Benigno Asunción, Paraguay</p>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#servicios">Redes</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section class="hero" id="inicio">
-        <div class="hero-content">
-            <h2>Lavamos todo ​a domicilio... <span> ¡Para hacerte la vida más fácil!</span></h2>
-            <p>Lavandería - Tintorería - Planchado</p>
-            <a href="#contacto" class="btn">Solicitá tu servicio</a>
-        </div>
-        <div class="hero-image">
-            <!-- SVG moderno de lavandería (placeholders con estilo) -->
-            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="100" cy="100" r="80" fill="#b3e0ff" opacity="0.6"/>
-                <circle cx="100" cy="100" r="60" fill="#6ab0ff" opacity="0.7"/>
-                <circle cx="100" cy="100" r="40" fill="#1e6f9f"/>
-                <rect x="70" y="70" width="60" height="60" fill="white" rx="10" transform="rotate(45 100 100)"/>
-                <path d="M100 70 L100 130 M70 100 L130 100" stroke="#0a2a44" stroke-width="6" stroke-linecap="round"/>
-            </svg>
-        </div>
-    </section>
+<header>
 
-    <section class="services" id="servicios">
-        <h3>Nuestros servicios</h3>
-        <p>¿Cómo funciona?
-            Haz tu pedido en 4 simples pasos</p>
-        <div class="cards">
-            <div class="card">
-                <div class="card-icon">📱</div>
-                <h4>Haz tu pedido</h4>
-                <p>En nuestra app o por WhatsApp</p>
-            </div>
-            <div class="card">
-                <div class="card-icon">🛄</div>
-                <h4>Lo recogemos</h4>
-                <p>En tu casa, donde nos pidas o en físico</p>
-            </div>
-            <div class="card">
-                <div class="card-icon">🚿</div>
-                <h4>Lo lavamos ​o planchamos</h4>
-                <p>Con cariño y calidad</p>
-            </div>
-            <div class="card">
-                <div class="card-icon">✨</div>
-                <h4>Lo devolvemos</h4>
-                <p>Limpio y dobladito</p>
-            </div>
-        </div>
-    </section>
+<div class="logo">Mr Jeff</div>
 
-    <section class="benefits" id="beneficios">
-        <div class="benefits-text">
-            <h3>¿Por qué elegir Mr Jeff?</h3>
-            <ul class="benefits-list">
-                <li>Productos ecológicos, hipoalergénicos</li>
-                <li>Personal capacitado y amable</li>
-                <li>Entregas en el día (servicio exprés)</li>
-                <li>Descuentos por fidelidad y packs</li>
-                <li>Más de 10 años de experiencia</li>
-            </ul>
-        </div>
-        <div class="benefits-image">
-            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                <rect x="30" y="50" width="140" height="100" fill="white" stroke="#1e6f9f" stroke-width="4" rx="20"/>
-                <circle cx="80" cy="100" r="20" fill="#b3e0ff"/>
-                <circle cx="120" cy="100" r="20" fill="#b3e0ff"/>
-                <path d="M60 140 L80 160 L120 160 L140 140" stroke="#1e6f9f" stroke-width="4" fill="none"/>
-            </svg>
-        </div>
-    </section>
+<nav>
+<a href="#">Cómo funciona</a>
+<a href="#">Servicios</a>
+<a href="#">Puntos Jeff</a>
+<a href="#">Precios</a>
+<a href="#">Política</a>
+</nav>
 
-    <section class="contact" id="contacto">
-        <h3>Contactanos</h3>
-        <p>Respondemos en menos de 1 hora</p>
-        <div class="contact-info">
-            <div class="contact-item">
-                <span>📞</span> +595 981 234567
-            </div>
-            <div class="contact-item">
-                <span>📧</span> hola@mrjeff.com.py
-            </div>
-            <div class="contact-item">
-                <span>📍</span> Asunción, Shopping Mariscal
-            </div>
-        </div>
-        <div style="margin-top: 3rem;">
-            <a href="#" class="btn" style="background: white; color: #0a2a44;">WhatsApp: 0981 234567</a>
-        </div>
-    </section>
+<div class="nav-buttons">
+<a class="btn-primary">Haz tu pedido</a>
+<a class="btn-secondary">Contáctanos por WhatsApp</a>
+</div>
 
-    <footer>
-        <p>Mr Jeff Paraguay - Lavandería de confianza © 2025 | Todos los derechos reservados</p>
-        <p style="margin-top: 0.5rem; font-size: 0.8rem;">Seguinos en: 
-            <a href="#" style="color: #6ab0ff; text-decoration: none;">Instagram</a> | 
-            <a href="#" style="color: #6ab0ff; text-decoration: none;">Facebook</a>
-        </p>
-    </footer>
+</header>
 
-    <!-- Pequeño script para resaltar el navbar al hacer scroll (opcional) -->
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
-    </script>
+
+<section class="hero">
+
+<div class="hero-left">
+
+<h1>
+Lavamos todo a domicilio... <br>
+<span>¡para hacerte la vida más fácil!</span>
+</h1>
+
+<div class="hero-buttons">
+<a class="btn-primary">Haz tu pedido</a>
+<a class="btn-secondary">Contáctanos por WhatsApp</a>
+</div>
+
+</div>
+
+<div class="hero-right">
+<img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952" alt="lavanderia">
+</div>
+
+</section>
+
+
+<section class="services">
+
+<h2>Nuestros servicios</h2>
+<p>Haz tu pedido en 4 simples pasos</p>
+
+<div class="cards">
+
+<div class="card">
+<h3>📱 Haz tu pedido</h3>
+<p>En nuestra app o WhatsApp</p>
+</div>
+
+<div class="card">
+<h3>🛄 Lo recogemos</h3>
+<p>En tu casa o donde prefieras</p>
+</div>
+
+<div class="card">
+<h3>🚿 Lo lavamos</h3>
+<p>Con cuidado y calidad</p>
+</div>
+
+<div class="card">
+<h3>✨ Lo devolvemos</h3>
+<p>Limpio y doblado</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="contact">
+
+<h2>Contáctanos</h2>
+<p>Respondemos en menos de 1 hora</p>
+
+<div class="contact-box">
+
+<div class="contact-item">
+📞 +595 981 234567
+</div>
+
+<div class="contact-item">
+📧 hola@mrjeff.com.py
+</div>
+
+<div class="contact-item">
+📍 Asunción, Paraguay
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+Mr Jeff Paraguay © 2025
+</footer>
+
 </body>
-
 </html>
-
-
-
-
-
-
