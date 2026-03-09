@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 <style>
-/* ===== ESTILOS GLOBALES (mismos que el index) ===== */
+/* ===== ESTILOS GLOBALES ===== */
 *{
 margin:0;
 padding:0;
@@ -112,7 +112,7 @@ background:#1a5bbf;
 /* MAIN (contenido de precios) */
 .pricing-container{
 max-width: 1100px;
-margin: 60px auto;
+margin: 60px auto 80px; /* margen inferior para separar del final */
 padding: 0 20px;
 }
 
@@ -201,16 +201,6 @@ color: #2f80ed;
 margin-right: 8px;
 }
 
-/* footer igual */
-footer{
-background:#051b30;
-color:#9ec9ff;
-text-align:center;
-padding:25px;
-font-size:14px;
-margin-top: 60px;
-}
-
 /* responsive */
 @media (max-width:700px){
 header{
@@ -263,12 +253,12 @@ font-size: 0.9rem;
 </head>
 <body>
 
-<!-- ========== HEADER (idéntico al index, excepto link activo) ========== -->
+<!-- ========== HEADER ========== -->
 <header>
 <div class="logo">Mr Jeff - Federación Rusa</div>
 
 <nav>
-<a href="/precios" style="color:#2f80ed; font-weight:600;">Precios y Servicios</a> <!-- destacado -->
+<a href="/precios" style="color:#2f80ed; font-weight:600;">Precios y Servicios</a>
 <a href="/">Volver</a>
 <a href="/preguntas">Preguntas Frecuentes</a>
 </nav>
@@ -330,41 +320,17 @@ font-size: 0.9rem;
     </div>
   </div>
 
-  <!-- Botón de acción (opcional) -->
+  <!-- Botón de acción: ahora enlace directo a WhatsApp -->
   <div style="text-align: center; margin-top: 30px;">
-    <a href="#contacto" class="btn-primary" style="font-size: 1.2rem; padding: 16px 40px;">
-      <i class="fas fa-whatsapp" style="margin-right: 8px;"></i>Pedí tu servicio
+    <a href="https://wa.me/595991858321" target="_blank" rel="noopener" class="btn-primary" style="font-size: 1.2rem; padding: 16px 40px;">
+      <i class="fab fa-whatsapp" style="margin-right: 8px;"></i>Pedí tu servicio
     </a>
   </div>
 </main>
 
-<!-- ========== SECCIÓN CONTACTO (idéntica al index, para navegación) ========== -->
-<section class="contact" id="contacto" style="background:#0a2a44; color:white; padding:80px 6%; text-align:center; margin-top:40px;">
-  <h2 style="font-size:34px; margin-bottom:15px;">Contáctanos</h2>
-  <p style="margin-bottom:30px;">¡Y te asesoramos!</p>
-  <div class="contact-box" style="display:flex; justify-content:center; gap:40px; flex-wrap:wrap;">
-    <a class="contact-item" href="https://wa.me/595991858321" target="_blank" rel="noopener" style="background:rgba(255,255,255,0.1); padding:18px 28px; border-radius:40px; text-decoration:none; color:white;">
-      📞 +595 0991 858321
-    </a>
-    <div class="contact-item" style="background:rgba(255,255,255,0.1); padding:18px 28px; border-radius:40px;">
-      📧 mrjeff.federacionrusa@gmail.com
-    </div>
-    <div class="contact-item" style="background:rgba(255,255,255,0.1); padding:18px 28px; border-radius:40px;">
-      📍 Federación Rusa 1274, Asunción 001527
-    </div>
-  </div>
-  <div class="map" style="margin-top:60px; display:flex; flex-direction:column; align-items:center; gap:20px;">
-    <iframe src="https://maps.google.com/maps?q=Federación%20Rusa%201274%20Asunción&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy" style="width:100%; max-width:900px; height:400px; border:0; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.2);"></iframe>
-    <a class="btn-primary" href="https://maps.app.goo.gl/TKWpPbmevnk2E14z7" target="_blank" rel="noopener">Abrir en Google Maps</a>
-  </div>
-</section>
+<!-- NADA MÁS: la página termina aquí, sin contacto ni footer -->
 
-<!-- ========== FOOTER ========== -->
-<footer>
-  Mr Jeff Federación Rusa © 2026
-</footer>
-
-<!-- script para scroll top al cargar (como en index) -->
+<!-- script para scroll top al cargar -->
 <script>
   window.onload = function() {
     window.scrollTo(0,0);
