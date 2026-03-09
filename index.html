@@ -40,7 +40,11 @@ header {
   text-align: left;
 }
 .logo span {
-  display: block; /* cada línea en bloque */
+  display: block;
+}
+.logo span:last-child {
+  font-size: 18px;
+  font-weight: 500;
 }
 
 nav {
@@ -219,11 +223,13 @@ footer {
     flex-direction: column;
     gap: 15px;
   }
-  /* Logo centrado y más grande en móvil */
   .logo {
     font-size: 30px;
     text-align: center;
     width: 100%;
+  }
+  .logo span:last-child {
+    font-size: 24px;
   }
   nav {
     justify-content: center;
@@ -284,7 +290,6 @@ footer {
 <body>
 
 <header>
-  <!-- Logo en dos líneas: Mr Jeff arriba, 📍 Federación Rusa abajo -->
   <div class="logo">
     <span>Mr Jeff</span>
     <span>📍 Federación Rusa</span>
