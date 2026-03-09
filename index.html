@@ -17,6 +17,7 @@ font-family:Inter,system-ui,Arial;
 body{
 background:#ffffff;
 color:#111;
+scroll-behavior:smooth;
 }
 
 /* NAVBAR */
@@ -164,6 +165,8 @@ flex-wrap:wrap;
 background:rgba(255,255,255,0.1);
 padding:18px 28px;
 border-radius:40px;
+text-decoration:none;
+color:white;
 }
 
 footer{
@@ -207,17 +210,17 @@ display:none;
 <div class="logo">Mr Jeff</div>
 
 <nav>
-<a href="#">Cómo funciona</a>
-<a href="#">Precios</a>
-<a href="#">Política</a>
-<a href="#">Servicios</a>
-<a href="#">Puntos Jeff</a>
-<a href="#">Preguntas Frecuentes</a>
+<a href="#funciona">Cómo funciona</a>
+<a href="/precios">Precios</a>
+<a href="/politica">Política</a>
+<a href="/servicios">Servicios</a>
+<a href="/puntosjeff">Puntos Jeff</a>
+<a href="/preguntas">Preguntas Frecuentes</a>
 </nav>
 
 <div class="nav-buttons">
-<a class="btn-primary">Redes Sociales</a>
-<a class="btn-secondary">Ubicación</a>
+<a class="btn-primary" href="/redes">Redes Sociales</a>
+<a class="btn-secondary" href="https://maps.app.goo.gl/TKWpPbmevnk2E14z7" target="_blank">Ubicación</a>
 </div>
 
 </header>
@@ -233,8 +236,8 @@ Lavamos todo a domicilio... <br>
 </h1>
 
 <div class="hero-buttons">
-<a class="btn-primary">Haz tu pedido</a>
-<a class="btn-secondary">Contáctanos por WhatsApp</a>
+<a class="btn-primary" href="#contacto">Haz tu pedido</a>
+<a class="btn-secondary" href="https://wa.me/595991858321" target="_blank">Contáctanos por WhatsApp</a>
 </div>
 
 </div>
@@ -246,7 +249,7 @@ Lavamos todo a domicilio... <br>
 </section>
 
 
-<section class="services">
+<section class="services" id="funciona">
 
 <h2>¡Nunca fué tan fácil!</h2>
 <p>Haz tu pedido en 4 simples pasos</p>
@@ -278,16 +281,16 @@ Lavamos todo a domicilio... <br>
 </section>
 
 
-<section class="contact">
+<section class="contact" id="contacto">
 
 <h2>Contáctanos</h2>
 <p>¡Y te asesoramos!</p>
 
 <div class="contact-box">
 
-<div class="contact-item">
+<a class="contact-item" href="https://wa.me/595991858321" target="_blank">
 📞 +595 0991 858321
-</div>
+</a>
 
 <div class="contact-item">
 📧 mrjeff.federacionrusa@gmail.com
@@ -296,28 +299,6 @@ Lavamos todo a domicilio... <br>
 <div class="contact-item">
 📍 Federación Rusa 1274, Asunción 001527
 </div>
-
-</div>
-
-<!-- MAPA -->
-
-<div style="margin-top:50px; display:flex; flex-direction:column; align-items:center; gap:20px;">
-
-<iframe
-width="100%"
-max-width="800"
-height="350"
-style="border:0; border-radius:12px;"
-loading="lazy"
-allowfullscreen
-src="https://www.google.com/maps?q=Federación+Rusa+1274+Asunción&output=embed">
-</iframe>
-
-<a href="https://maps.app.goo.gl/TKWpPbmevnk2E14z7"
-target="_blank"
-class="btn-primary">
-Abrir en Google Maps
-</a>
 
 </div>
 
@@ -330,4 +311,3 @@ Mr Jeff Federación Rusa © 2026
 
 </body>
 </html>
-
