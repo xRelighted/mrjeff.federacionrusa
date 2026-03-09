@@ -5,445 +5,351 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mr Jeff Paraguay</title>
 <link rel="icon" type="image/jpeg" href="/favicon.jpg">
-<!-- Font Awesome 6 (iconos) -->
+<!-- Font Awesome 6 -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Inter,system-ui,Arial;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, system-ui, Arial;
 }
 
-body{
-background:#ffffff;
-color:#111;
-scroll-behavior:smooth;
+body {
+  background: #ffffff;
+  color: #111;
+  scroll-behavior: smooth;
 }
 
-/* NAVBAR */
-
-header{
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:20px 6%;
-background:white;
-box-shadow:0 2px 10px rgba(0,0,0,0.05);
-flex-wrap:wrap;
+/* HEADER */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 6%;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  flex-wrap: wrap;
 }
 
-.logo{
-font-weight:700;
-font-size:22px;
+/* Logo en dos líneas */
+.logo {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.2;
+  text-align: left;
+}
+.logo span {
+  display: block; /* cada línea en bloque */
 }
 
-nav{
-display:flex;
-gap:30px;
-flex-wrap:wrap;
+nav {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
-nav a{
-text-decoration:none;
-color:#444;
-font-weight:500;
+nav a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
 }
 
-.nav-buttons{
-display:flex;
-gap:12px;
-align-items:center;
-flex-wrap:wrap;
+.nav-buttons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-/* Botones originales */
-.btn-primary{
-background:#2f80ed;
-color:white;
-padding:12px 22px;
-border-radius:6px;
-font-weight:600;
-text-decoration:none;
-display:inline-block;
+/* Botones */
+.btn-primary {
+  background: #2f80ed;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
 }
 
-.btn-secondary{
-background:#4da3ff;
-color:white;
-padding:12px 22px;
-border-radius:6px;
-font-weight:600;
-text-decoration:none;
-display:inline-block;
+.btn-secondary {
+  background: #4da3ff;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
 }
 
-/* iconos sociales */
-.social-icon{
-display:inline-flex;
-align-items:center;
-justify-content:center;
-width:48px;
-height:48px;
-background:#2f80ed;
-color:white;
-border-radius:6px;
-text-decoration:none;
-font-size:24px;
-transition:background 0.2s;
+/* Iconos sociales */
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: #2f80ed;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 24px;
+  transition: background 0.2s;
 }
-
-.social-icon:hover{
-background:#1a5bbf;
+.social-icon:hover {
+  background: #1a5bbf;
 }
-
-.social-icon .fab{
-font-size:24px;
+.social-icon .fab {
+  font-size: 24px;
 }
 
 /* HERO */
-
-.hero{
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:80px 6%;
-gap:60px;
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 6%;
+  gap: 60px;
 }
-
-.hero-left{
-max-width:600px;
+.hero-left {
+  max-width: 600px;
 }
-
-.hero-left h1{
-font-size:56px;
-line-height:1.1;
-font-weight:800;
-margin-bottom:20px;
+.hero-left h1 {
+  font-size: 56px;
+  line-height: 1.1;
+  font-weight: 800;
+  margin-bottom: 20px;
 }
-
-.hero-left span{
-color:#2f80ed;
+.hero-left span {
+  color: #2f80ed;
 }
-
-.hero-buttons{
-display:flex;
-gap:15px;
-margin-top:30px;
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
 }
-
-.hero-right img{
-width:420px;
-border-radius:20px;
-box-shadow:0 15px 40px rgba(0,0,0,0.15);
+.hero-right img {
+  width: 420px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
 }
 
 /* SERVICES */
-
-.services{
-padding:100px 6%;
-background:#f7fbff;
-text-align:center;
+.services {
+  padding: 100px 6%;
+  background: #f7fbff;
+  text-align: center;
 }
-
-.services h2{
-font-size:36px;
-margin-bottom:10px;
+.services h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
 }
-
-.cards{
-margin-top:50px;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:30px;
+.cards {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
 }
-
-.card{
-background:white;
-padding:40px 25px;
-border-radius:16px;
-box-shadow:0 10px 30px rgba(0,0,0,0.06);
+.card {
+  background: white;
+  padding: 40px 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
 }
-
-.card h3{
-margin-top:10px;
-margin-bottom:8px;
+.card h3 {
+  margin-top: 10px;
+  margin-bottom: 8px;
 }
 
 /* CONTACT */
-
-.contact{
-padding:100px 6%;
-background:#0a2a44;
-color:white;
-text-align:center;
+.contact {
+  padding: 100px 6%;
+  background: #0a2a44;
+  color: white;
+  text-align: center;
 }
-
-.contact h2{
-font-size:34px;
-margin-bottom:15px;
+.contact h2 {
+  font-size: 34px;
+  margin-bottom: 15px;
 }
-
-.contact-box{
-margin-top:40px;
-display:flex;
-justify-content:center;
-gap:40px;
-flex-wrap:wrap;
+.contact-box {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
 }
-
-.contact-item{
-background:rgba(255,255,255,0.1);
-padding:18px 28px;
-border-radius:40px;
-text-decoration:none;
-color:white;
+.contact-item {
+  background: rgba(255,255,255,0.1);
+  padding: 18px 28px;
+  border-radius: 40px;
+  text-decoration: none;
+  color: white;
 }
 
 /* MAPA */
-
-.map{
-margin-top:60px;
-display:flex;
-flex-direction:column;
-align-items:center;
-gap:20px;
+.map {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.map iframe {
+  width: 100%;
+  max-width: 900px;
+  height: 400px;
+  border: 0;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
-.map iframe{
-width:100%;
-max-width:900px;
-height:400px;
-border:0;
-border-radius:12px;
-box-shadow:0 10px 30px rgba(0,0,0,0.2);
-}
-
-footer{
-background:#051b30;
-color:#9ec9ff;
-text-align:center;
-padding:25px;
-font-size:14px;
+footer {
+  background: #051b30;
+  color: #9ec9ff;
+  text-align: center;
+  padding: 25px;
+  font-size: 14px;
 }
 
 /* RESPONSIVE */
-
-@media (max-width:900px){
-
-header{
-flex-direction:column;
-gap:15px;
+@media (max-width: 900px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+  /* Logo centrado y más grande en móvil */
+  .logo {
+    font-size: 30px;
+    text-align: center;
+    width: 100%;
+  }
+  nav {
+    justify-content: center;
+    gap: 15px;
+  }
+  nav a {
+    font-size: 14px;
+  }
+  .nav-buttons {
+    justify-content: center;
+  }
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 6%;
+  }
+  .hero-left h1 {
+    font-size: 34px;
+  }
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-buttons a {
+    width: 100%;
+    max-width: 260px;
+    text-align: center;
+  }
+  .hero-right img {
+    width: 85%;
+  }
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  .contact-box {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  .map iframe {
+    height: 300px;
+  }
 }
 
-/* Logo centrado y más grande en móvil */
-.logo{
-font-size:30px;
-text-align:center;
-width:100%;
+@media (max-width: 480px) {
+  .social-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 20px;
+  }
+  .btn-secondary {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
 }
-
-nav{
-justify-content:center;
-gap:15px;
-}
-
-nav a{
-font-size:14px;
-}
-
-.nav-buttons{
-justify-content:center;
-}
-
-.hero{
-flex-direction:column;
-text-align:center;
-padding:50px 6%;
-}
-
-.hero-left h1{
-font-size:34px;
-}
-
-.hero-buttons{
-flex-direction:column;
-align-items:center;
-}
-
-.hero-buttons a{
-width:100%;
-max-width:260px;
-text-align:center;
-}
-
-.hero-right img{
-width:85%;
-}
-
-.cards{
-grid-template-columns:1fr;
-}
-
-.contact-box{
-flex-direction:column;
-align-items:center;
-gap:15px;
-}
-
-.map iframe{
-height:300px;
-}
-
-}
-
-/* Ajuste extra para pantallas muy pequeñas */
-@media (max-width:480px){
-.social-icon{
-width:42px;
-height:42px;
-font-size:20px;
-}
-.btn-secondary{
-padding:10px 16px;
-font-size:14px;
-}
-}
-
 </style>
 </head>
-
 <body>
 
 <header>
+  <!-- Logo en dos líneas: Mr Jeff arriba, 📍 Federación Rusa abajo -->
+  <div class="logo">
+    <span>Mr Jeff</span>
+    <span>📍 Federación Rusa</span>
+  </div>
 
-<!-- Logo modificado: Mr Jeff, 📍 Federación Rusa -->
-<div class="logo">Mr Jeff,
-📍 Federación Rusa</div>
+  <nav>
+    <a href="#funciona">Cómo funciona</a>
+    <a href="/precios">Precios y Servicios</a>
+    <a href="/preguntas">Preguntas Frecuentes</a>
+  </nav>
 
-<nav>
-<a href="#funciona">Cómo funciona</a>
-<a href="/precios">Precios y Servicios</a>
-<a href="/preguntas">Preguntas Frecuentes</a>
-</nav>
-
-<div class="nav-buttons">
-  <a href="https://www.instagram.com/mrjeff_federacionrusa/" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">
-    <i class="fab fa-instagram"></i>
-  </a>
-  <a href="https://www.facebook.com/Mrjeff.federacionrusa/" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook">
-    <i class="fab fa-facebook"></i>
-  </a>
-  <a class="btn-secondary" href="https://maps.app.goo.gl/TKWpPbmevnk2E14z7" target="_blank" rel="noopener">Ubicación</a>
-</div>
-
+  <div class="nav-buttons">
+    <a href="https://www.instagram.com/mrjeff_federacionrusa/" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.facebook.com/Mrjeff.federacionrusa/" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook">
+      <i class="fab fa-facebook"></i>
+    </a>
+    <a class="btn-secondary" href="https://maps.app.goo.gl/TKWpPbmevnk2E14z7" target="_blank" rel="noopener">Ubicación</a>
+  </div>
 </header>
 
-
 <section class="hero">
-
-<div class="hero-left">
-
-<h1>
-Lavamos todo a domicilio... <br>
-<span>¡para hacerte la vida más fácil!</span>
-</h1>
-
-<div class="hero-buttons">
-<a class="btn-primary" href="#contacto">Haz tu pedido</a>
-<a class="btn-secondary" href="https://wa.me/595991858321" target="_blank" rel="noopener">Contáctanos por WhatsApp</a>
-</div>
-
-</div>
-
-<div class="hero-right">
-<img src="https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/cd6d6bae-a3c2-4d4c-f2af-b38b35b5e400/publicContain" alt="Lavandería Mr Jeff">
-</div>
-
+  <div class="hero-left">
+    <h1>Lavamos todo a domicilio... <br><span>¡para hacerte la vida más fácil!</span></h1>
+    <div class="hero-buttons">
+      <a class="btn-primary" href="#contacto">Haz tu pedido</a>
+      <a class="btn-secondary" href="https://wa.me/595991858321" target="_blank" rel="noopener">Contáctanos por WhatsApp</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img src="https://imagedelivery.net/xaKlCos5cTg_1RWzIu_h-A/cd6d6bae-a3c2-4d4c-f2af-b38b35b5e400/publicContain" alt="Lavandería Mr Jeff">
+  </div>
 </section>
-
 
 <section class="services" id="funciona">
-
-<h2>¡Nunca fué tan fácil!</h2>
-<p>Haz tu pedido en 4 simples pasos</p>
-
-<div class="cards">
-
-<div class="card">
-<h3>📱 Haz tu pedido</h3>
-<p>En WhatsApp o en fisico</p>
-</div>
-
-<div class="card">
-<h3>🛄 Lo recogemos</h3>
-<p>En tu casa o donde prefieras</p>
-</div>
-
-<div class="card">
-<h3>🚿 Lo lavamos</h3>
-<p>Con cuidado y calidad</p>
-</div>
-
-<div class="card">
-<h3>✨ Lo devolvemos</h3>
-<p>Limpio y doblado</p>
-</div>
-
-</div>
-
+  <h2>¡Nunca fué tan fácil!</h2>
+  <p>Haz tu pedido en 4 simples pasos</p>
+  <div class="cards">
+    <div class="card"><h3>📱 Haz tu pedido</h3><p>En WhatsApp o en fisico</p></div>
+    <div class="card"><h3>🛄 Lo recogemos</h3><p>En tu casa o donde prefieras</p></div>
+    <div class="card"><h3>🚿 Lo lavamos</h3><p>Con cuidado y calidad</p></div>
+    <div class="card"><h3>✨ Lo devolvemos</h3><p>Limpio y doblado</p></div>
+  </div>
 </section>
-
 
 <section class="contact" id="contacto">
-
-<h2>Contáctanos</h2>
-<p>¡Y te asesoramos!</p>
-
-<div class="contact-box">
-
-<a class="contact-item" href="https://wa.me/595991858321" target="_blank" rel="noopener">
-📞 +595 0991 858321
-</a>
-
-<div class="contact-item">
-📧 mrjeff.federacionrusa@gmail.com
-</div>
-
-<div class="contact-item">
-📍 Federación Rusa 1274, Asunción 001527
-</div>
-
-</div>
-
-<div class="map">
-
-<iframe
-src="https://maps.google.com/maps?q=Federación%20Rusa%201274%20Asunción&t=&z=15&ie=UTF8&iwloc=&output=embed"
-loading="lazy">
-</iframe>
-
-<a class="btn-primary" href="https://maps.app.goo.gl/TKWpPbmevnk2E14z7" target="_blank" rel="noopener">
-Abrir en Google Maps
-</a>
-
-</div>
-
+  <h2>Contáctanos</h2>
+  <p>¡Y te asesoramos!</p>
+  <div class="contact-box">
+    <a class="contact-item" href="https://wa.me/595991858321" target="_blank" rel="noopener">📞 +595 0991 858321</a>
+    <div class="contact-item">📧 mrjeff.federacionrusa@gmail.com</div>
+    <div class="contact-item">📍 Federación Rusa 1274, Asunción 001527</div>
+  </div>
+  <div class="map">
+    <iframe src="https://maps.google.com/maps?q=Federación%20Rusa%201274%20Asunción&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
+    <a class="btn-primary" href="https://maps.app.goo.gl/TKWpPbmevnk2E14z7" target="_blank" rel="noopener">Abrir en Google Maps</a>
+  </div>
 </section>
 
-
-<footer>
-Mr Jeff Federación Rusa © 2026
-</footer>
+<footer>Mr Jeff Federación Rusa © 2026</footer>
 
 <script>
-window.onload = function() {
-window.scrollTo(0,0);
-};
+window.onload = function() { window.scrollTo(0,0); };
 </script>
 
 </body>
 </html>
-
