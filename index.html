@@ -48,11 +48,6 @@ nav a{
 text-decoration:none;
 color:#444;
 font-weight:500;
-transition:0.2s;
-}
-
-nav a:hover{
-color:#2f80ed;
 }
 
 .nav-buttons{
@@ -60,19 +55,22 @@ display:flex;
 gap:12px;
 }
 
-/* SOLO CAMBIO EL BOTÓN DE UBICACIÓN */
-.nav-buttons .ubicacion{
-background:#0a56c2; /* azul oscuro */
+.btn-primary{
+background:#2f80ed;
 color:white;
 padding:12px 22px;
 border-radius:6px;
 font-weight:600;
 text-decoration:none;
-transition:0.25s;
 }
 
-.nav-buttons .ubicacion:hover{
-background:#2f80ff; /* azul más claro al pasar el mouse */
+.btn-secondary{
+background:#4da3ff;
+color:white;
+padding:12px 22px;
+border-radius:6px;
+font-weight:600;
+text-decoration:none;
 }
 
 /* HERO */
@@ -279,7 +277,8 @@ height:300px;
 </nav>
 
 <div class="nav-buttons">
-<a class="ubicacion" href="https://maps.app.goo.gl/TKWpPbmevnk2E14z7" target="_blank">Ubicación</a>
+<a class="btn-primary" href="/redes">Redes Sociales</a>
+<a class="btn-secondary" href="https://maps.app.goo.gl/TKWpPbmevnk2E14z7" target="_blank">Ubicación</a>
 </div>
 
 </header>
@@ -381,5 +380,13 @@ Abrir en Google Maps
 Mr Jeff Federación Rusa © 2026
 </footer>
 
+<script>
+window.onload = function() {
+window.scrollTo(0,0);
+};
+</script>
+
 </body>
 </html>
+
+sigue sin funcionar lo de al entrar estes arriba, solo sacalo y mejora los colores de donde dice ubicacion arriba a la derecha por que se deja de ver muy facil, tiene que ser un azul con blanco
