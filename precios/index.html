@@ -11,243 +11,274 @@
 <style>
 /* ===== ESTILOS GLOBALES ===== */
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Inter, system-ui, Arial, sans-serif;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Inter, system-ui, Arial, sans-serif;
 }
 
 body{
-background:#f9fafc;
-color:#111;
-scroll-behavior:smooth;
+  background:#f9fafc;
+  color:#111;
+  scroll-behavior:smooth;
+}
+
+/* Animación de entrada */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* HEADER */
 header{
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:20px 6%;
-background:white;
-box-shadow:0 2px 10px rgba(0,0,0,0.05);
-flex-wrap:wrap;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:20px 6%;
+  background:white;
+  box-shadow:0 2px 10px rgba(0,0,0,0.05);
+  flex-wrap:wrap;
 }
 
 .logo{
-font-weight:700;
-font-size:22px;
+  font-weight:700;
+  font-size:22px;
 }
 
 nav{
-display:flex;
-gap:30px;
-flex-wrap:wrap;
+  display:flex;
+  gap:30px;
+  flex-wrap:wrap;
 }
 
 nav a{
-text-decoration:none;
-color:#444;
-font-weight:500;
-transition:color 0.2s;
+  text-decoration:none;
+  color:#444;
+  font-weight:500;
+  transition:color 0.2s;
 }
 nav a:hover{
-color:#2f80ed;
+  color:#2f80ed;
 }
 
 .nav-buttons{
-display:flex;
-gap:12px;
-align-items:center;
-flex-wrap:wrap;
+  display:flex;
+  gap:12px;
+  align-items:center;
+  flex-wrap:wrap;
 }
 
 /* botones */
 .btn-primary{
-background:#2f80ed;
-color:white;
-padding:12px 22px;
-border-radius:6px;
-font-weight:600;
-text-decoration:none;
-display:inline-block;
-transition:background 0.2s;
+  background:#2f80ed;
+  color:white;
+  padding:12px 22px;
+  border-radius:6px;
+  font-weight:600;
+  text-decoration:none;
+  display:inline-block;
+  transition:background 0.2s, transform 0.2s;
 }
 .btn-primary:hover{
-background:#1a5bbf;
+  background:#1a5bbf;
+  transform: scale(1.02);
 }
 
 .btn-secondary{
-background:#4da3ff;
-color:white;
-padding:12px 22px;
-border-radius:6px;
-font-weight:600;
-text-decoration:none;
-display:inline-block;
-transition:background 0.2s;
+  background:#4da3ff;
+  color:white;
+  padding:12px 22px;
+  border-radius:6px;
+  font-weight:600;
+  text-decoration:none;
+  display:inline-block;
+  transition:background 0.2s, transform 0.2s;
 }
 .btn-secondary:hover{
-background:#2f80ed;
+  background:#2f80ed;
+  transform: scale(1.02);
 }
 
 /* iconos sociales */
 .social-icon{
-display:inline-flex;
-align-items:center;
-justify-content:center;
-width:48px;
-height:48px;
-background:#2f80ed;
-color:white;
-border-radius:6px;
-text-decoration:none;
-font-size:24px;
-transition:background 0.2s;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:48px;
+  height:48px;
+  background:#2f80ed;
+  color:white;
+  border-radius:6px;
+  text-decoration:none;
+  font-size:24px;
+  transition:background 0.2s, transform 0.2s;
 }
 .social-icon:hover{
-background:#1a5bbf;
+  background:#1a5bbf;
+  transform: scale(1.05);
 }
 
 /* MAIN (contenido de precios) */
 .pricing-container{
-max-width: 1100px;
-margin: 60px auto 80px; /* margen inferior para separar del final */
-padding: 0 20px;
+  max-width: 1100px;
+  margin: 60px auto 80px;
+  padding: 0 20px;
+  animation: fadeInUp 0.8s ease-out;
 }
 
 .pricing-title{
-font-size: 42px;
-font-weight: 800;
-margin-bottom: 20px;
-color: #0a2a44;
-text-align: center;
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #0a2a44;
+  text-align: center;
 }
 .pricing-sub{
-text-align: center;
-color: #4a5568;
-margin-bottom: 50px;
-font-size: 18px;
+  text-align: center;
+  color: #4a5568;
+  margin-bottom: 50px;
+  font-size: 18px;
 }
 
-/* tablas */
+/* tablas - recuadros mejorados */
 .table-wrapper{
-background: white;
-border-radius: 24px;
-box-shadow: 0 15px 35px rgba(0,0,0,0.05);
-padding: 30px;
-margin-bottom: 50px;
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+  padding: 30px;
+  margin-bottom: 50px;
+  border: 1px solid rgba(0,0,0,0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.table-wrapper:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 25px 45px rgba(47,128,237,0.1);
 }
 
 .section-title{
-font-size: 28px;
-font-weight: 700;
-margin-bottom: 10px;
-color: #0a2a44;
-display: flex;
-align-items: center;
-gap: 10px;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #0a2a44;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 .section-title i{
-color: #2f80ed;
-font-size: 32px;
+  color: #2f80ed;
+  font-size: 32px;
 }
 
 .price-table{
-width: 100%;
-border-collapse: collapse;
-margin-top: 20px;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
 }
 .price-table th{
-text-align: left;
-padding: 16px 12px;
-background: #f0f6ff;
-color: #0a2a44;
-font-weight: 600;
-border-radius: 12px 12px 0 0;
+  text-align: left;
+  padding: 16px 12px;
+  background: #f0f6ff;
+  color: #0a2a44;
+  font-weight: 600;
+  border-radius: 12px 12px 0 0;
 }
 .price-table td{
-padding: 16px 12px;
-border-bottom: 1px solid #e9edf2;
+  padding: 16px 12px;
+  border-bottom: 1px solid #e9edf2;
+  transition: background 0.2s;
 }
 .price-table tr:last-child td{
-border-bottom: none;
+  border-bottom: none;
 }
 .price-table td:first-child{
-font-weight: 500;
-color: #1e293b;
+  font-weight: 500;
+  color: #1e293b;
 }
 .price-table td:last-child{
-font-weight: 700;
-color: #0a2a44;
-font-size: 1.2rem;
+  font-weight: 700;
+  color: #0a2a44;
+  font-size: 1.2rem;
+}
+.price-table tr:hover td{
+  background: #f5f9ff;
 }
 .price-table .highlight{
-background-color: #f9fcff;
+  background-color: #f9fcff;
 }
 
 /* nota aclaratoria */
 .note-box{
-background: #eef5ff;
-padding: 20px 25px;
-border-radius: 18px;
-margin-top: 25px;
-color: #0a2a44;
-font-size: 1rem;
-border-left: 6px solid #2f80ed;
+  background: #eef5ff;
+  padding: 20px 25px;
+  border-radius: 18px;
+  margin-top: 25px;
+  color: #0a2a44;
+  font-size: 1rem;
+  border-left: 6px solid #2f80ed;
+  transition: border-left-color 0.2s, background 0.2s;
+}
+.note-box:hover{
+  border-left-color: #1a5bbf;
+  background: #e8f0fe;
 }
 .note-box i{
-color: #2f80ed;
-margin-right: 8px;
+  color: #2f80ed;
+  margin-right: 8px;
 }
 
 /* responsive */
 @media (max-width:700px){
-header{
-flex-direction:column;
-gap:15px;
-}
-nav{
-justify-content:center;
-gap:15px;
-}
-nav a{
-font-size:14px;
-}
-.nav-buttons{
-justify-content:center;
-}
-.pricing-title{
-font-size: 32px;
-}
-.table-wrapper{
-padding: 20px;
-}
-.price-table th, .price-table td{
-padding: 12px 8px;
-font-size: 0.95rem;
-}
-.price-table td:last-child{
-font-size: 1rem;
-}
-.section-title{
-font-size: 24px;
-}
-.social-icon{
-width:42px;
-height:42px;
-}
+  header{
+    flex-direction:column;
+    gap:15px;
+  }
+  nav{
+    justify-content:center;
+    gap:15px;
+  }
+  nav a{
+    font-size:14px;
+  }
+  .nav-buttons{
+    justify-content:center;
+  }
+  .pricing-title{
+    font-size: 32px;
+  }
+  .table-wrapper{
+    padding: 20px;
+  }
+  .price-table th, .price-table td{
+    padding: 12px 8px;
+    font-size: 0.95rem;
+  }
+  .price-table td:last-child{
+    font-size: 1rem;
+  }
+  .section-title{
+    font-size: 24px;
+  }
+  .social-icon{
+    width:42px;
+    height:42px;
+  }
 }
 
 @media (max-width:480px){
-.price-table{
-display: block;
-overflow-x: auto;
-white-space: nowrap;
-}
-.note-box{
-font-size: 0.9rem;
-}
+  .price-table{
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .note-box{
+    font-size: 0.9rem;
+  }
 }
 </style>
 </head>
@@ -320,9 +351,9 @@ font-size: 0.9rem;
     </div>
   </div>
 
-  <!-- Botón de acción: ahora enlace directo a WhatsApp -->
+  <!-- Botón de acción: enlace directo a WhatsApp con animación -->
   <div style="text-align: center; margin-top: 30px;">
-    <a href="https://wa.me/595991858321" target="_blank" rel="noopener" class="btn-primary" style="font-size: 1.2rem; padding: 16px 40px;">
+    <a href="https://wa.me/595991858321" target="_blank" rel="noopener" class="btn-primary" style="font-size: 1.2rem; padding: 16px 40px; display: inline-block; animation: fadeInUp 0.8s 0.2s both;">
       <i class="fab fa-whatsapp" style="margin-right: 8px;"></i>Pedí tu servicio
     </a>
   </div>
