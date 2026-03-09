@@ -6,6 +6,8 @@
 <title>Mr Jeff Paraguay</title>
 <link rel="icon" type="image/jpeg" href="/favicon.jpg">
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
 
 *{
@@ -31,6 +33,9 @@ padding:20px 6%;
 background:white;
 box-shadow:0 2px 10px rgba(0,0,0,0.05);
 flex-wrap:wrap;
+position:sticky;
+top:0;
+z-index:1000;
 }
 
 .logo{
@@ -48,12 +53,30 @@ nav a{
 text-decoration:none;
 color:#444;
 font-weight:500;
+transition:0.2s;
+}
+
+nav a:hover{
+color:#2f80ed;
 }
 
 .nav-buttons{
 display:flex;
-gap:12px;
+gap:14px;
+align-items:center;
 }
+
+.nav-buttons a{
+font-size:20px;
+color:#2f80ed;
+transition:0.2s;
+}
+
+.nav-buttons a:hover{
+transform:scale(1.15);
+}
+
+/* BOTONES */
 
 .btn-primary{
 background:#2f80ed;
@@ -62,6 +85,12 @@ padding:12px 22px;
 border-radius:6px;
 font-weight:600;
 text-decoration:none;
+transition:0.25s;
+}
+
+.btn-primary:hover{
+background:#1c63c7;
+transform:translateY(-2px);
 }
 
 .btn-secondary{
@@ -71,6 +100,12 @@ padding:12px 22px;
 border-radius:6px;
 font-weight:600;
 text-decoration:none;
+transition:0.25s;
+}
+
+.btn-secondary:hover{
+background:#2f80ed;
+transform:translateY(-2px);
 }
 
 /* HERO */
@@ -108,6 +143,11 @@ margin-top:30px;
 width:420px;
 border-radius:20px;
 box-shadow:0 15px 40px rgba(0,0,0,0.15);
+transition:0.4s;
+}
+
+.hero-right img:hover{
+transform:scale(1.03);
 }
 
 /* SERVICES */
@@ -135,6 +175,12 @@ background:white;
 padding:40px 25px;
 border-radius:16px;
 box-shadow:0 10px 30px rgba(0,0,0,0.06);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 18px 40px rgba(0,0,0,0.08);
 }
 
 .card h3{
@@ -170,6 +216,12 @@ padding:18px 28px;
 border-radius:40px;
 text-decoration:none;
 color:white;
+transition:0.25s;
+}
+
+.contact-item:hover{
+background:rgba(255,255,255,0.2);
+transform:translateY(-3px);
 }
 
 /* MAPA */
@@ -277,8 +329,19 @@ height:300px;
 </nav>
 
 <div class="nav-buttons">
-<a class="btn-primary" href="/redes">Redes Sociales</a>
-<a class="btn-secondary" href="https://maps.app.goo.gl/TKWpPbmevnk2E14z7" target="_blank">Ubicación</a>
+
+<a href="https://www.instagram.com/mrjeff_federacionrusa/" target="_blank">
+<i class="fab fa-instagram"></i>
+</a>
+
+<a href="https://www.facebook.com/Mrjeff.federacionrusa/" target="_blank">
+<i class="fab fa-facebook"></i>
+</a>
+
+<a class="btn-secondary" href="https://maps.app.goo.gl/TKWpPbmevnk2E14z7" target="_blank">
+Ubicación
+</a>
+
 </div>
 
 </header>
@@ -309,7 +372,7 @@ Lavamos todo a domicilio... <br>
 
 <section class="services" id="funciona">
 
-<h2>¡Nunca fué tan fácil!</h2>
+<h2>¡Nunca fue tan fácil!</h2>
 <p>Haz tu pedido en 4 simples pasos</p>
 
 <div class="cards">
@@ -379,12 +442,6 @@ Abrir en Google Maps
 <footer>
 Mr Jeff Federación Rusa © 2026
 </footer>
-
-<script>
-window.onload = function() {
-window.scrollTo(0,0);
-};
-</script>
 
 </body>
 </html>
