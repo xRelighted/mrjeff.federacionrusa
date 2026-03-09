@@ -46,9 +46,22 @@ header{
   flex-wrap:wrap;
 }
 
+/* Logo en dos líneas con tamaños diferenciados */
 .logo{
   font-weight:700;
   font-size:22px;
+  line-height:1.2;
+  text-align:left;
+}
+.logo span{
+  display:block;
+}
+.logo span:first-child{
+  font-size:22px;
+}
+.logo span:last-child{
+  font-size:18px;
+  font-weight:500;
 }
 
 nav{
@@ -233,10 +246,20 @@ nav a:hover{
 }
 
 /* responsive */
-@media (max-width:700px){
+@media (max-width:900px){
   header{
     flex-direction:column;
     gap:15px;
+  }
+  .logo{
+    text-align:center;
+    width:100%;
+  }
+  .logo span:first-child{
+    font-size:30px;
+  }
+  .logo span:last-child{
+    font-size:24px;
   }
   nav{
     justify-content:center;
@@ -286,7 +309,10 @@ nav a:hover{
 
 <!-- ========== HEADER ========== -->
 <header>
-<div class="logo">Mr Jeff - Federación Rusa</div>
+<div class="logo">
+  <span>Mr Jeff</span>
+  <span>📍 Federación Rusa</span>
+</div>
 
 <nav>
 <a href="/precios" style="color:#2f80ed; font-weight:600;">Precios y Servicios</a>
