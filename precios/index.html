@@ -3,24 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mr Jeff Paraguay - Nuestros Servicios</title>
+<title>Mr Jeff Paraguay - Servicios y Consejos</title>
 <link rel="icon" type="image/jpeg" href="/favicon.jpg">
-<!-- Font Awesome 6 -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 <style>
-/* ===== ESTILOS GLOBALES ===== */
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:Inter, system-ui, Arial, sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, system-ui, Arial, sans-serif;
 }
 
-body{
-  background:#f9fafc;
-  color:#111;
-  scroll-behavior:smooth;
+body {
+  background: #f9fafc;
+  color: #111;
+  scroll-behavior: smooth;
 }
 
 @keyframes fadeInUp {
@@ -29,127 +27,206 @@ body{
 }
 
 /* HEADER */
-header{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:20px 6%;
-  background:white;
-  box-shadow:0 2px 10px rgba(0,0,0,0.05);
-  flex-wrap:wrap;
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 6%;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  flex-wrap: wrap;
 }
 
-.logo{
-  font-weight:700;
-  font-size:22px;
-  line-height:1.2;
-  text-align:left;
+.logo {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.2;
+  text-align: left;
 }
-.logo span{
-  display:block;
+.logo span {
+  display: block;
 }
-.logo span:first-child{
-  font-size:22px;
+.logo span:first-child {
+  font-size: 22px;
 }
-.logo span:last-child{
-  font-size:18px;
-  font-weight:500;
-}
-
-nav{
-  display:flex;
-  gap:30px;
-  flex-wrap:wrap;
+.logo span:last-child {
+  font-size: 18px;
+  font-weight: 500;
 }
 
-nav a{
-  text-decoration:none;
-  color:#444;
-  font-weight:500;
-  transition:color 0.2s;
+nav {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
 }
-nav a:hover{
-  color:#2f80ed;
+nav a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  transition: color 0.2s;
 }
-
-.nav-buttons{
-  display:flex;
-  gap:12px;
-  align-items:center;
-  flex-wrap:wrap;
+nav a:hover {
+  color: #2f80ed;
 }
 
-.btn-primary{
-  background:#2f80ed;
-  color:white;
-  padding:12px 22px;
-  border-radius:6px;
-  font-weight:600;
-  text-decoration:none;
-  display:inline-block;
-  transition:background 0.2s, transform 0.2s;
+.nav-buttons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
 }
-.btn-primary:hover{
-  background:#1a5bbf;
+
+.btn-primary {
+  background: #2f80ed;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.2s, transform 0.2s;
+}
+.btn-primary:hover {
+  background: #1a5bbf;
   transform: scale(1.02);
 }
 
-.btn-secondary{
-  background:#4da3ff;
-  color:white;
-  padding:12px 22px;
-  border-radius:6px;
-  font-weight:600;
-  text-decoration:none;
-  display:inline-block;
-  transition:background 0.2s, transform 0.2s;
+.btn-secondary {
+  background: #4da3ff;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.2s, transform 0.2s;
 }
-.btn-secondary:hover{
-  background:#2f80ed;
+.btn-secondary:hover {
+  background: #2f80ed;
   transform: scale(1.02);
 }
 
-.social-icon{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  width:48px;
-  height:48px;
-  background:#2f80ed;
-  color:white;
-  border-radius:6px;
-  text-decoration:none;
-  font-size:24px;
-  transition:background 0.2s, transform 0.2s;
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: #2f80ed;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 24px;
+  transition: background 0.2s, transform 0.2s;
 }
-.social-icon:hover{
-  background:#1a5bbf;
+.social-icon:hover {
+  background: #1a5bbf;
   transform: scale(1.05);
 }
 
 /* MAIN */
-.pricing-container{
+.pricing-container {
   max-width: 1100px;
   margin: 60px auto 80px;
   padding: 0 20px;
   animation: fadeInUp 0.8s ease-out;
 }
 
-.pricing-title{
+.pricing-title {
   font-size: 42px;
   font-weight: 800;
   margin-bottom: 20px;
   color: #0a2a44;
   text-align: center;
 }
-.pricing-sub{
+.pricing-sub {
   text-align: center;
   color: #4a5568;
   margin-bottom: 50px;
   font-size: 18px;
 }
 
-.table-wrapper{
+/* Tarjetas de servicios (sin precios) */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+.service-card {
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(47,128,237,0.1);
+}
+.service-card i {
+  font-size: 2.2rem;
+  color: #2f80ed;
+  margin-bottom: 12px;
+}
+.service-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #0a2a44;
+}
+.service-card p {
+  color: #4a5568;
+  line-height: 1.4;
+}
+
+/* Sección Lavandería (sin precios) */
+.laundry-info {
+  background: white;
+  border-radius: 24px;
+  padding: 30px;
+  margin-bottom: 50px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+}
+.laundry-info .section-title {
+  margin-bottom: 20px;
+}
+.bag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 20px 0;
+}
+.bag-item {
+  background: #f0f6ff;
+  border-radius: 16px;
+  padding: 15px 20px;
+  flex: 1;
+  min-width: 180px;
+  text-align: center;
+}
+.bag-item strong {
+  display: block;
+  font-size: 1.2rem;
+  color: #0a2a44;
+}
+.bag-item span {
+  font-size: 0.9rem;
+  color: #2f80ed;
+}
+.note-box {
+  background: #eef5ff;
+  padding: 20px 25px;
+  border-radius: 18px;
+  margin-top: 20px;
+  border-left: 6px solid #2f80ed;
+}
+.note-box i {
+  color: #2f80ed;
+  margin-right: 8px;
+}
+
+/* Tabla de planes (precios) */
+.table-wrapper {
   background: white;
   border-radius: 24px;
   box-shadow: 0 15px 35px rgba(0,0,0,0.05);
@@ -158,12 +235,11 @@ nav a:hover{
   border: 1px solid rgba(0,0,0,0.03);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.table-wrapper:hover{
+.table-wrapper:hover {
   transform: translateY(-5px);
   box-shadow: 0 25px 45px rgba(47,128,237,0.1);
 }
-
-.section-title{
+.section-title {
   font-size: 28px;
   font-weight: 700;
   margin-bottom: 10px;
@@ -172,17 +248,16 @@ nav a:hover{
   align-items: center;
   gap: 10px;
 }
-.section-title i{
+.section-title i {
   color: #2f80ed;
   font-size: 32px;
 }
-
-.price-table{
+.price-table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
 }
-.price-table th{
+.price-table th {
   text-align: left;
   padding: 16px 12px;
   background: #f0f6ff;
@@ -190,47 +265,28 @@ nav a:hover{
   font-weight: 600;
   border-radius: 12px 12px 0 0;
 }
-.price-table td{
+.price-table td {
   padding: 16px 12px;
   border-bottom: 1px solid #e9edf2;
   transition: background 0.2s;
 }
-.price-table tr:last-child td{
+.price-table tr:last-child td {
   border-bottom: none;
 }
-.price-table td:first-child{
+.price-table td:first-child {
   font-weight: 500;
   color: #1e293b;
 }
-.price-table td:last-child{
+.price-table td:last-child {
   font-weight: 700;
   color: #0a2a44;
   font-size: 1.2rem;
 }
-.price-table tr:hover td{
+.price-table tr:hover td {
   background: #f5f9ff;
 }
 
-.note-box{
-  background: #eef5ff;
-  padding: 20px 25px;
-  border-radius: 18px;
-  margin-top: 25px;
-  color: #0a2a44;
-  font-size: 1rem;
-  border-left: 6px solid #2f80ed;
-  transition: border-left-color 0.2s, background 0.2s;
-}
-.note-box:hover{
-  border-left-color: #1a5bbf;
-  background: #e8f0fe;
-}
-.note-box i{
-  color: #2f80ed;
-  margin-right: 8px;
-}
-
-/* Consejos útiles */
+/* Consejos útiles – visual mejorado */
 .tips-content {
   background: white;
   border-radius: 24px;
@@ -238,82 +294,91 @@ nav a:hover{
   margin-bottom: 50px;
 }
 .tips-content h3 {
-  font-size: 1.5rem;
-  margin-top: 1.5rem;
-  margin-bottom: 0.75rem;
+  font-size: 1.6rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
   color: #0a2a44;
+  border-left: 5px solid #2f80ed;
+  padding-left: 15px;
 }
 .tips-content h3:first-of-type {
   margin-top: 0;
 }
-.tips-content p {
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+.tip-card {
+  background: #f8faff;
+  border-radius: 20px;
+  padding: 20px;
+  transition: transform 0.2s;
+}
+.tip-card:hover {
+  transform: translateY(-3px);
+}
+.tip-card h4 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  color: #2f80ed;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.tip-card h4 i {
+  font-size: 1.4rem;
+}
+.tip-card p {
   line-height: 1.5;
-  margin-bottom: 1rem;
+  margin-bottom: 12px;
   color: #2d3748;
 }
-.tips-content ul {
-  margin-left: 1.5rem;
-  margin-bottom: 1rem;
+.tip-card .ventajas {
+  color: #2f80ed;
+  font-weight: 500;
+  margin-top: 10px;
 }
-.tips-content li {
-  margin-bottom: 0.5rem;
+.tip-card .inconvenientes {
+  color: #e53e3e;
+  font-weight: 500;
 }
 
-@media (max-width:900px){
-  header{
-    flex-direction:column;
-    gap:15px;
+@media (max-width:900px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
   }
-  .logo{
-    text-align:center;
-    width:100%;
+  .logo {
+    text-align: center;
+    width: 100%;
   }
-  .logo span:first-child{
-    font-size:30px;
+  .logo span:first-child {
+    font-size: 30px;
   }
-  .logo span:last-child{
-    font-size:24px;
-  }
-  nav{
-    justify-content:center;
-    gap:15px;
-  }
-  nav a{
-    font-size:14px;
-  }
-  .nav-buttons{
-    justify-content:center;
-  }
-  .pricing-title{
-    font-size: 32px;
-  }
-  .table-wrapper{
-    padding: 20px;
-  }
-  .price-table th, .price-table td{
-    padding: 12px 8px;
-    font-size: 0.95rem;
-  }
-  .price-table td:last-child{
-    font-size: 1rem;
-  }
-  .section-title{
+  .logo span:last-child {
     font-size: 24px;
   }
-  .social-icon{
-    width:42px;
-    height:42px;
+  nav {
+    justify-content: center;
+    gap: 15px;
   }
-}
-
-@media (max-width:480px){
-  .price-table{
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
+  nav a {
+    font-size: 14px;
   }
-  .note-box{
-    font-size: 0.9rem;
+  .nav-buttons {
+    justify-content: center;
+  }
+  .pricing-title {
+    font-size: 32px;
+  }
+  .section-title {
+    font-size: 24px;
+  }
+  .social-icon {
+    width: 42px;
+    height: 42px;
   }
 }
 </style>
@@ -327,20 +392,16 @@ nav a:hover{
 </div>
 
 <nav>
-  <a href="/">Volver</a> 
+  <a href="/">Volver</a>
   <a href="#consejos">Consejos útiles</a>
   <a href="/informacion">La empresa</a>
   <a href="/preguntas">Preguntas Frecuentes</a>
 </nav>
 
 <div class="nav-buttons">
-  <a href="https://www.instagram.com/mrjeff_federacionrusa/" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">
-    <i class="fab fa-instagram"></i>
-  </a>
-  <a href="https://www.facebook.com/Mrjeff.federacionrusa/" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook">
-    <i class="fab fa-facebook"></i>
-  </a>
-  <a class="btn-secondary" href="https://maps.app.goo.gl/TKWpPbmevnk2E14z7" target="_blank" rel="noopener">Ubicación</a>
+  <a href="https://www.instagram.com/mrjeff_federacionrusa/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+  <a href="https://www.facebook.com/Mrjeff.federacionrusa/" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a>
+  <a class="btn-secondary" href="https://maps.app.goo.gl/TKWpPbmevnk2E14z7" target="_blank">Ubicación</a>
 </div>
 </header>
 
@@ -348,95 +409,93 @@ nav a:hover{
   <h1 class="pricing-title">Mr Jeff Federación Rusa</h1>
   <p class="pricing-sub">Cuidamos tus prendas con la mejor tecnología y servicio puerta a puerta</p>
 
-  <!-- HOGAR -->
+  <!-- HOGAR (descriptivo, sin precios) -->
   <div id="hogar" class="table-wrapper">
     <div class="section-title">
       <i class="fas fa-home"></i> Hogar
     </div>
-    <table class="price-table">
-      <thead>
-        <tr><th>Artículo</th><th>Precio</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Cortinas</td><td>Consultar</td></tr>
-        <tr><td>Edredones, mantas</td><td>Consultar</td></tr>
-        <tr><td>Alfombras</td><td>Consultar</td></tr>
-        <tr><td>Almohadas</td><td>Consultar</td></tr>
-        <tr><td>Peluches</td><td>Consultar</td></tr>
-      </tbody>
-    </table>
+    <div class="services-grid">
+      <div class="service-card">
+        <i class="fas fa-curtain"></i>
+        <h3>Cortinas</h3>
+        <p>Lavado profesional sin desmontar o a domicilio. Eliminamos polvo, ácaros y manchas delicadas.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-bed"></i>
+        <h3>Edredones y mantas</h3>
+        <p>Limpieza profunda que respeta los tejidos, recuperando su esponjosidad y frescura.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-carpet"></i>
+        <h3>Alfombras</h3>
+        <p>Lavado con técnicas especiales, secado rápido y cuidado de los materiales.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-pillow"></i>
+        <h3>Almohadas</h3>
+        <p>Eliminamos ácaros y manchas, devolviendo la higiene y suavidad original.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-bear"></i>
+        <h3>Peluches</h3>
+        <p>Lavado delicado, desinfección y secado cuidadoso para que queden como nuevos.</p>
+      </div>
+    </div>
   </div>
 
-  <!-- TINTORERÍA -->
+  <!-- TINTORERÍA (descriptivo) -->
   <div id="tintoreria" class="table-wrapper">
     <div class="section-title">
       <i class="fas fa-tshirt"></i> Tintorería
     </div>
-    <table class="price-table">
-      <thead>
-        <tr><th>Artículo</th><th>Precio</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Blanqueo de prendas</td><td>Consultar</td></tr>
-        <tr><td>Trajes</td><td>Consultar</td></tr>
-        <tr><td>Smoking</td><td>Consultar</td></tr>
-        <tr><td>Camperas</td><td>Consultar</td></tr>
-        <tr><td>Vestidos de fiesta</td><td>Consultar</td></tr>
-        <tr><td>Vestidos de novia</td><td>Consultar</td></tr>
-        <tr><td>Vestidos de bautizo</td><td>Consultar</td></tr>
-      </tbody>
-    </table>
+    <div class="services-grid">
+      <div class="service-card"><i class="fas fa-magic"></i><h3>Blanqueo de prendas</h3><p>Recuperamos el blanco original sin dañar las fibras.</p></div>
+      <div class="service-card"><i class="fas fa-user-tie"></i><h3>Trajes y Smoking</h3><p>Limpieza en seco, planchado profesional y conservación de la forma.</p></div>
+      <div class="service-card"><i class="fas fa-vest"></i><h3>Camperas</h3><p>Tratamiento especial para cuero, plumas y tejidos técnicos.</p></div>
+      <div class="service-card"><i class="fas fa-female"></i><h3>Vestidos de fiesta</h3><p>Cuidado extremo con pedrería, encajes y telas delicadas.</p></div>
+      <div class="service-card"><i class="fas fa-heart"></i><h3>Vestidos de novia</h3><p>Preservación y limpieza con los más altos estándares.</p></div>
+      <div class="service-card"><i class="fas fa-baby"></i><h3>Vestidos de bautizo</h3><p>Lavado suave, conservando el bordado y las puntillas.</p></div>
+    </div>
   </div>
 
-  <!-- CALZADOS -->
+  <!-- CALZADOS (descriptivo) -->
   <div id="calzados" class="table-wrapper">
     <div class="section-title">
       <i class="fas fa-shoe-prints"></i> Calzados
     </div>
-    <table class="price-table">
-      <thead>
-        <tr><th>Artículo</th><th>Precio</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Lavado de calzados deportivos</td><td>Consultar</td></tr>
-        <tr><td>Lavado de calzados de tela</td><td>Consultar</td></tr>
-      </tbody>
-    </table>
+    <div class="services-grid">
+      <div class="service-card"><i class="fas fa-futbol"></i><h3>Calzados deportivos</h3><p>Lavado profundo, desodorización y secado sin deformar.</p></div>
+      <div class="service-card"><i class="fas fa-shoe-prints"></i><h3>Calzados de tela</h3><p>Limpieza especial para zapatillas de lona, gamuza y textiles.</p></div>
+    </div>
   </div>
 
-  <!-- LAVANDERÍA (Bolsas) -->
-  <div id="lavanderia" class="table-wrapper">
+  <!-- LAVANDERÍA (sin precios, solo descripción de bolsas) -->
+  <div class="laundry-info">
     <div class="section-title">
       <i class="fas fa-tshirt"></i> Lavandería
     </div>
+    <p style="margin-bottom: 15px;">Servicio de lavado y planchado en general. Elegí la bolsa que mejor se adapte a tus necesidades:</p>
+    <div class="bag-list">
+      <div class="bag-item"><strong>Bolsa hasta 6 kg</strong><span>Capacidad máxima</span></div>
+      <div class="bag-item"><strong>Bolsa hasta 3 kg</strong><span>Ideal para envíos pequeños</span></div>
+    </div>
     <div class="note-box">
       <i class="fas fa-info-circle"></i>
-      Servicio de lavado y planchado en general. Elegí la bolsa que mejor se adapte a tus necesidades:
+      <strong>¿Qué incluye?</strong> Prendas diarias, toallas, sábanas, fundas, prendas deportivas, camisas, pantalones, jeans. Todo lavado, secado y doblado.
     </div>
-    <table class="price-table">
-      <thead>
-        <tr><th>Bolsas de lavandería</th><th>Precio</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Bolsa hasta 6 kg (prendas lavadas, secadas y dobladas)</td><td>Gs. 99.000</td></tr>
-        <tr><td>Bolsa hasta 3 kg (prendas lavadas, secadas y dobladas)</td><td>Gs. 69.000</td></tr>
-      </tbody>
-    </table>
-    <div class="note-box">
+    <div class="note-box" style="margin-top: 15px; background:#e9f3fa;">
       <i class="fas fa-iron"></i>
-      Incluye: prendas diarias, toallas, sábanas, fundas, prendas deportivas, camisas, pantalones, jeans.
+      Recogida y entrega sin costo adicional. ¡Consultá por precios personalizados!
     </div>
   </div>
 
-  <!-- PLANES POR SUSCRIPCIÓN -->
+  <!-- PLANES POR SUSCRIPCIÓN (ÚNICA SECCIÓN CON PRECIOS) -->
   <div id="planes" class="table-wrapper">
     <div class="section-title">
       <i class="fas fa-calendar-alt"></i> Planes por suscripción
     </div>
     <table class="price-table">
-      <thead>
-        <tr><th>Artículo</th><th>Precio</th></tr>
-      </thead>
+      <thead><tr><th>Artículo</th><th>Precio</th></tr></thead>
       <tbody>
         <tr><td>PLAN XS (prendas lavadas, secadas y dobladas) · 1 bolsa por semana</td><td>Gs. 236.000</td></tr>
         <tr><td>PLAN S (prendas lavadas, secadas y dobladas) · 1 bolsa por semana</td><td>Gs. 356.000</td></tr>
@@ -449,40 +508,45 @@ nav a:hover{
     </div>
   </div>
 
-  <!-- CONSEJOS ÚTILES -->
+  <!-- CONSEJOS ÚTILES (diseño visual mejorado) -->
   <div id="consejos" class="table-wrapper tips-content">
     <div class="section-title">
       <i class="fas fa-lightbulb"></i> Consejos útiles
     </div>
     <h3>¿Cómo conocer los tejidos?</h3>
-    
-    <h3>Tejidos naturales</h3>
-    <p><strong>Lana</strong><br>
-    Encoge si se lava a demasiada temperatura. Se deforma si se seca colgada.<br>
-    <strong>Ventajas:</strong> buen aislamiento térmico, gran poder absorbente y gran capacidad de recuperación.<br>
-    <strong>Inconvenientes:</strong> tiende a apelmazarse y amarillea.</p>
-    
-    <p><strong>Algodón</strong><br>
-    Encoge si se lava a demasiada temperatura, resiste bien a la plancha. Si tiene color, lavar la primera vez en solitario.<br>
-    <strong>Ventajas:</strong> fresco y flexible, alta resistencia al rasgado y al frote.<br>
-    <strong>Inconvenientes:</strong> fuerte tendencia a arrugarse.</p>
-    
-    <p><strong>Lino</strong><br>
-    Lavar siempre a mano. Nunca centrifugar ni lavar a temperaturas altas. Resiste bien a la plancha.<br>
-    <strong>Ventajas:</strong> fresco y agradable al tacto, resiste bien a la suciedad.<br>
-    <strong>Inconvenientes:</strong> fuerte tendencia a arrugarse.</p>
-    
-    <h3>Tejidos artificiales</h3>
-    <p><strong>Acetato, rayón y viscosa</strong><br>
-    No se deben centrifugar para evitar deformaciones.<br>
-    <strong>Ventajas:</strong> tienen un tacto sedoso y fijan bien los colores.<br>
-    <strong>Inconvenientes:</strong> baja resistencia en húmedo, arden con facilidad y se cargan de electricidad estática.</p>
-    
-    <h3>Tejidos sintéticos</h3>
-    <p><strong>Poliéster, nylon y lycra</strong><br>
-    Altamente sensibles al calor, lavar en agua tibia y planchar a baja temperatura sin vapor.<br>
-    <strong>Ventajas:</strong> muy resistentes, se arrugan poco, fijan bien los colores.<br>
-    <strong>Inconvenientes:</strong> arden con facilidad y se cargan de electricidad estática.</p>
+    <div class="tips-grid">
+      <!-- Naturales -->
+      <div class="tip-card">
+        <h4><i class="fas fa-leaf"></i> Lana</h4>
+        <p>Encoge si se lava a demasiada temperatura. Se deforma si se seca colgada.</p>
+        <p class="ventajas">✓ Ventajas: buen aislamiento térmico, gran poder absorbente y recuperación.</p>
+        <p class="inconvenientes">✗ Inconvenientes: tiende a apelmazarse y amarillea.</p>
+      </div>
+      <div class="tip-card">
+        <h4><i class="fas fa-cloud-sun"></i> Algodón</h4>
+        <p>Encoge si se lava a demasiada temperatura, resiste bien a la plancha. Si tiene color, lavar la primera vez en solitario.</p>
+        <p class="ventajas">✓ Ventajas: fresco y flexible, alta resistencia al rasgado y al frote.</p>
+        <p class="inconvenientes">✗ Inconvenientes: fuerte tendencia a arrugarse.</p>
+      </div>
+      <div class="tip-card">
+        <h4><i class="fas fa-feather-alt"></i> Lino</h4>
+        <p>Lavar siempre a mano. Nunca centrifugar ni lavar a temperaturas altas. Resiste bien a la plancha.</p>
+        <p class="ventajas">✓ Ventajas: fresco y agradable al tacto, resiste bien a la suciedad.</p>
+        <p class="inconvenientes">✗ Inconvenientes: fuerte tendencia a arrugarse.</p>
+      </div>
+      <div class="tip-card">
+        <h4><i class="fas fa-tint"></i> Acetato, rayón, viscosa</h4>
+        <p>No se deben centrifugar para evitar deformaciones.</p>
+        <p class="ventajas">✓ Ventajas: tacto sedoso, fijan bien los colores.</p>
+        <p class="inconvenientes">✗ Inconvenientes: baja resistencia en húmedo, arden con facilidad, electricidad estática.</p>
+      </div>
+      <div class="tip-card">
+        <h4><i class="fas fa-snowplow"></i> Poliéster, nylon, lycra</h4>
+        <p>Altamente sensibles al calor, lavar en agua tibia y planchar a baja temperatura sin vapor.</p>
+        <p class="ventajas">✓ Ventajas: muy resistentes, se arrugan poco, fijan bien los colores.</p>
+        <p class="inconvenientes">✗ Inconvenientes: arden con facilidad, electricidad estática.</p>
+      </div>
+    </div>
   </div>
 
   <!-- Botón de WhatsApp -->
@@ -498,6 +562,5 @@ nav a:hover{
     window.scrollTo(0,0);
   };
 </script>
-
 </body>
 </html>
