@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mr Jeff Paraguay - Precios</title>
+<title>Mr Jeff Paraguay - Servicios, Planes y Consejos</title>
 <link rel="icon" type="image/jpeg" href="/favicon.jpg">
-<!-- Font Awesome 6 (iconos) -->
+<!-- Font Awesome 6 -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 <style>
@@ -23,16 +23,9 @@ body{
   scroll-behavior:smooth;
 }
 
-/* Animación de entrada */
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* HEADER */
@@ -46,7 +39,6 @@ header{
   flex-wrap:wrap;
 }
 
-/* Logo en dos líneas con tamaños diferenciados */
 .logo{
   font-weight:700;
   font-size:22px;
@@ -87,7 +79,6 @@ nav a:hover{
   flex-wrap:wrap;
 }
 
-/* botones */
 .btn-primary{
   background:#2f80ed;
   color:white;
@@ -118,7 +109,6 @@ nav a:hover{
   transform: scale(1.02);
 }
 
-/* iconos sociales */
 .social-icon{
   display:inline-flex;
   align-items:center;
@@ -137,7 +127,7 @@ nav a:hover{
   transform: scale(1.05);
 }
 
-/* MAIN (contenido de precios) */
+/* MAIN */
 .pricing-container{
   max-width: 1100px;
   margin: 60px auto 80px;
@@ -159,7 +149,6 @@ nav a:hover{
   font-size: 18px;
 }
 
-/* tablas - recuadros mejorados */
 .table-wrapper{
   background: white;
   border-radius: 24px;
@@ -221,11 +210,7 @@ nav a:hover{
 .price-table tr:hover td{
   background: #f5f9ff;
 }
-.price-table .highlight{
-  background-color: #f9fcff;
-}
 
-/* nota aclaratoria */
 .note-box{
   background: #eef5ff;
   padding: 20px 25px;
@@ -245,7 +230,35 @@ nav a:hover{
   margin-right: 8px;
 }
 
-/* responsive */
+/* Consejos útiles */
+.tips-content {
+  background: white;
+  border-radius: 24px;
+  padding: 30px;
+  margin-bottom: 50px;
+}
+.tips-content h3 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #0a2a44;
+}
+.tips-content h3:first-of-type {
+  margin-top: 0;
+}
+.tips-content p {
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  color: #2d3748;
+}
+.tips-content ul {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+.tips-content li {
+  margin-bottom: 0.5rem;
+}
+
 @media (max-width:900px){
   header{
     flex-direction:column;
@@ -307,7 +320,6 @@ nav a:hover{
 </head>
 <body>
 
-<!-- ========== HEADER ========== -->
 <header>
 <div class="logo">
   <span>Mr Jeff</span>
@@ -315,50 +327,113 @@ nav a:hover{
 </div>
 
 <nav>
-<a href="/precios" style="color:#2f80ed; font-weight:600;">Nuestros Servicios</a>
-<a href="/">Volver</a>
-<a href="/informacion">La empresa</a>
-<a href="/preguntas">Preguntas Frecuentes</a>
+  <a href="#hogar">Hogar</a>
+  <a href="#tintoreria">Tintorería</a>
+  <a href="#calzados">Calzados</a>
+  <a href="#lavanderia">Lavandería</a>
+  <a href="#planes">Planes</a>
+  <a href="#consejos">Consejos útiles</a>
+  <a href="informacion.html">La empresa</a>
+  <a href="/preguntas">Preguntas Frecuentes</a>
 </nav>
 
 <div class="nav-buttons">
-<a href="https://www.instagram.com/mrjeff_federacionrusa/" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">
-<i class="fab fa-instagram"></i>
-</a>
-<a href="https://www.facebook.com/Mrjeff.federacionrusa/" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook">
-<i class="fab fa-facebook"></i>
-</a>
-<a class="btn-secondary" href="https://maps.app.goo.gl/TKWpPbmevnk2E14z7" target="_blank" rel="noopener">Ubicación</a>
+  <a href="https://www.instagram.com/mrjeff_federacionrusa/" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="https://www.facebook.com/Mrjeff.federacionrusa/" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook">
+    <i class="fab fa-facebook"></i>
+  </a>
+  <a class="btn-secondary" href="https://maps.app.goo.gl/TKWpPbmevnk2E14z7" target="_blank" rel="noopener">Ubicación</a>
 </div>
 </header>
 
-<!-- ========== CONTENIDO PRINCIPAL: TABLAS DE PRECIOS ========== -->
 <main class="pricing-container">
-  <h1 class="pricing-title">Precios Mr Jeff</h1>
-  <p class="pricing-sub">Elegí la opción que mejor se adapte a vos.</p>
+  <h1 class="pricing-title">Mr Jeff Federación Rusa</h1>
+  <p class="pricing-sub">Cuidamos tus prendas con la mejor tecnología y servicio puerta a puerta</p>
 
-  <!-- SECCIÓN BOLSAS -->
-  <div class="table-wrapper">
+  <!-- HOGAR -->
+  <div id="hogar" class="table-wrapper">
     <div class="section-title">
-      <i class="fas fa-shopping-bag"></i> Bolsas de lavandería
+      <i class="fas fa-home"></i> Hogar
     </div>
     <table class="price-table">
       <thead>
         <tr><th>Artículo</th><th>Precio</th></tr>
       </thead>
       <tbody>
-        <tr><td>BOLSA HASTA 6 KG</td><td>Gs. 99.000</td></tr>
-        <tr><td>BOLSA HASTA 3 KG</td><td>Gs. 69.000</td></tr>
+        <tr><td>Cortinas</td><td>Consultar</td></tr>
+        <tr><td>Edredones, mantas</td><td>Consultar</td></tr>
+        <tr><td>Alfombras</td><td>Consultar</td></tr>
+        <tr><td>Almohadas</td><td>Consultar</td></tr>
+        <tr><td>Peluches</td><td>Consultar</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- TINTORERÍA -->
+  <div id="tintoreria" class="table-wrapper">
+    <div class="section-title">
+      <i class="fas fa-tshirt"></i> Tintorería
+    </div>
+    <table class="price-table">
+      <thead>
+        <tr><th>Artículo</th><th>Precio</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Blanqueo de prendas</td><td>Consultar</td></tr>
+        <tr><td>Trajes</td><td>Consultar</td></tr>
+        <tr><td>Smoking</td><td>Consultar</td></tr>
+        <tr><td>Camperas</td><td>Consultar</td></tr>
+        <tr><td>Vestidos de fiesta</td><td>Consultar</td></tr>
+        <tr><td>Vestidos de novia</td><td>Consultar</td></tr>
+        <tr><td>Vestidos de bautizo</td><td>Consultar</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- CALZADOS -->
+  <div id="calzados" class="table-wrapper">
+    <div class="section-title">
+      <i class="fas fa-shoe-prints"></i> Calzados
+    </div>
+    <table class="price-table">
+      <thead>
+        <tr><th>Artículo</th><th>Precio</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Lavado de calzados deportivos</td><td>Consultar</td></tr>
+        <tr><td>Lavado de calzados de tela</td><td>Consultar</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- LAVANDERÍA (Bolsas) -->
+  <div id="lavanderia" class="table-wrapper">
+    <div class="section-title">
+      <i class="fas fa-tshirt"></i> Lavandería
+    </div>
+    <div class="note-box">
+      <i class="fas fa-info-circle"></i>
+      Servicio de lavado y planchado en general. Elegí la bolsa que mejor se adapte a tus necesidades:
+    </div>
+    <table class="price-table">
+      <thead>
+        <tr><th>Bolsas de lavandería</th><th>Precio</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Bolsa hasta 6 kg (prendas lavadas, secadas y dobladas)</td><td>Gs. 99.000</td></tr>
+        <tr><td>Bolsa hasta 3 kg (prendas lavadas, secadas y dobladas)</td><td>Gs. 69.000</td></tr>
       </tbody>
     </table>
     <div class="note-box">
-      <i class="fas fa-info-circle"></i>
-      <strong>Las bolsas incluyen:</strong> prendas diarias, toallas, sábanas, fundas, prendas deportivas, camisas, pantalones, jeans. (Prendas lavadas, secadas y dobladas).
+      <i class="fas fa-iron"></i>
+      Incluye: prendas diarias, toallas, sábanas, fundas, prendas deportivas, camisas, pantalones, jeans.
     </div>
   </div>
 
-  <!-- SECCIÓN PLANES -->
-  <div class="table-wrapper">
+  <!-- PLANES POR SUSCRIPCIÓN -->
+  <div id="planes" class="table-wrapper">
     <div class="section-title">
       <i class="fas fa-calendar-alt"></i> Planes por suscripción
     </div>
@@ -378,7 +453,43 @@ nav a:hover{
     </div>
   </div>
 
-  <!-- Botón de acción: enlace directo a WhatsApp con animación -->
+  <!-- CONSEJOS ÚTILES -->
+  <div id="consejos" class="table-wrapper tips-content">
+    <div class="section-title">
+      <i class="fas fa-lightbulb"></i> Consejos útiles
+    </div>
+    <h3>¿Cómo conocer los tejidos?</h3>
+    
+    <h3>Tejidos naturales</h3>
+    <p><strong>Lana</strong><br>
+    Encoge si se lava a demasiada temperatura. Se deforma si se seca colgada.<br>
+    <strong>Ventajas:</strong> buen aislamiento térmico, gran poder absorbente y gran capacidad de recuperación.<br>
+    <strong>Inconvenientes:</strong> tiende a apelmazarse y amarillea.</p>
+    
+    <p><strong>Algodón</strong><br>
+    Encoge si se lava a demasiada temperatura, resiste bien a la plancha. Si tiene color, lavar la primera vez en solitario.<br>
+    <strong>Ventajas:</strong> fresco y flexible, alta resistencia al rasgado y al frote.<br>
+    <strong>Inconvenientes:</strong> fuerte tendencia a arrugarse.</p>
+    
+    <p><strong>Lino</strong><br>
+    Lavar siempre a mano. Nunca centrifugar ni lavar a temperaturas altas. Resiste bien a la plancha.<br>
+    <strong>Ventajas:</strong> fresco y agradable al tacto, resiste bien a la suciedad.<br>
+    <strong>Inconvenientes:</strong> fuerte tendencia a arrugarse.</p>
+    
+    <h3>Tejidos artificiales</h3>
+    <p><strong>Acetato, rayón y viscosa</strong><br>
+    No se deben centrifugar para evitar deformaciones.<br>
+    <strong>Ventajas:</strong> tienen un tacto sedoso y fijan bien los colores.<br>
+    <strong>Inconvenientes:</strong> baja resistencia en húmedo, arden con facilidad y se cargan de electricidad estática.</p>
+    
+    <h3>Tejidos sintéticos</h3>
+    <p><strong>Poliéster, nylon y lycra</strong><br>
+    Altamente sensibles al calor, lavar en agua tibia y planchar a baja temperatura sin vapor.<br>
+    <strong>Ventajas:</strong> muy resistentes, se arrugan poco, fijan bien los colores.<br>
+    <strong>Inconvenientes:</strong> arden con facilidad y se cargan de electricidad estática.</p>
+  </div>
+
+  <!-- Botón de WhatsApp -->
   <div style="text-align: center; margin-top: 30px;">
     <a href="https://wa.me/595991858321" target="_blank" rel="noopener" class="btn-primary" style="font-size: 1.2rem; padding: 16px 40px; display: inline-block; animation: fadeInUp 0.8s 0.2s both;">
       <i class="fab fa-whatsapp" style="margin-right: 8px;"></i>Pedí tu servicio
@@ -386,9 +497,6 @@ nav a:hover{
   </div>
 </main>
 
-<!-- NADA MÁS: la página termina aquí, sin contacto ni footer -->
-
-<!-- script para scroll top al cargar -->
 <script>
   window.onload = function() {
     window.scrollTo(0,0);
