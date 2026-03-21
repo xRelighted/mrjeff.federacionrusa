@@ -57,7 +57,7 @@ nav a {
   text-decoration: none;
   color: #444;
   font-weight: 500;
-  transition: color 0.2s, transform 0.2s;
+  transition: all 0.2s ease;
 }
 nav a:hover {
   color: #2f80ed;
@@ -128,7 +128,7 @@ nav a:hover {
 .faq-hero {
   text-align: center;
   padding: 80px 6% 40px;
-  background: linear-gradient(135deg, #f7fbff 0%, #ffffff 100%);
+  background: linear-gradient(135deg, #f9fbfe 0%, #ffffff 100%);
 }
 .faq-hero h1 {
   font-size: 48px;
@@ -158,13 +158,29 @@ nav a:hover {
   background: white;
   border-radius: 20px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
   overflow: hidden;
   border: 1px solid rgba(0,0,0,0.03);
+  opacity: 0;
+  transform: translateY(15px);
+  animation: fadeInUp 0.5s forwards;
 }
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Stagger children */
+.faq-item:nth-child(1) { animation-delay: 0.05s; }
+.faq-item:nth-child(2) { animation-delay: 0.1s; }
+.faq-item:nth-child(3) { animation-delay: 0.15s; }
+.faq-item:nth-child(4) { animation-delay: 0.2s; }
+.faq-item:nth-child(5) { animation-delay: 0.25s; }
+
 .faq-item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 15px 30px rgba(47,128,237,0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 20px 30px rgba(47,128,237,0.1);
   border-color: rgba(47,128,237,0.2);
 }
 .faq-question {
@@ -174,10 +190,10 @@ nav a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: background 0.2s;
+  transition: background 0.2s ease;
 }
 .faq-question:hover {
-  background: #f8faff;
+  background: #fafcff;
 }
 .faq-question h3 {
   font-size: 1.2rem;
@@ -194,7 +210,7 @@ nav a:hover {
 .faq-toggle {
   color: #2f80ed;
   font-size: 1.2rem;
-  transition: transform 0.3s;
+  transition: transform 0.35s cubic-bezier(0.2, 0.9, 0.4, 1.1);
 }
 .faq-item.active .faq-toggle {
   transform: rotate(180deg);
@@ -202,13 +218,12 @@ nav a:hover {
 .faq-answer {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s ease-out;
-  background: #f9fafc;
+  transition: max-height 0.45s cubic-bezier(0.33, 1, 0.68, 1);
+  background: #fafcff;
   border-top: 1px solid #eef2f6;
 }
 .faq-item.active .faq-answer {
   max-height: 300px;
-  transition: max-height 0.5s ease-in;
 }
 .faq-answer p {
   padding: 22px 30px;
@@ -221,7 +236,7 @@ nav a:hover {
   margin-right: 8px;
 }
 
-/* Botón de WhatsApp flotante (opcional) */
+/* WhatsApp flotante */
 .whatsapp-float {
   position: fixed;
   bottom: 30px;
@@ -235,14 +250,14 @@ nav a:hover {
   align-items: center;
   justify-content: center;
   font-size: 32px;
-  box-shadow: 0 4px 15px rgba(37,211,102,0.4);
-  transition: all 0.3s;
+  box-shadow: 0 4px 15px rgba(37,211,102,0.3);
+  transition: all 0.3s ease;
   z-index: 99;
 }
 .whatsapp-float:hover {
   transform: scale(1.1);
   background: #128C7E;
-  box-shadow: 0 6px 20px rgba(37,211,102,0.5);
+  box-shadow: 0 8px 20px rgba(37,211,102,0.4);
 }
 
 footer {
@@ -309,7 +324,7 @@ footer {
     <a href="/">Inicio</a>
     <a href="/precios">Servicios</a>
     <a href="/informacion">La empresa</a>
-    <a href="/preguntas" style="color:#2f80ed; font-weight:600;">Preguntas Frecuentes</a>
+    <a href="/preguntas">Preguntas Frecuentes</a>
   </nav>
   <div class="nav-buttons">
     <a href="https://www.instagram.com/mrjeff_federacionrusa/" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">
@@ -387,22 +402,18 @@ footer {
     </div>
   </div>
 
-  <!-- Botón flotante de WhatsApp -->
   <a href="https://wa.me/595991858321" target="_blank" rel="noopener" class="whatsapp-float" aria-label="WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
 </main>
-  
+
 <script>
-  // Acordeón para las preguntas frecuentes
   document.querySelectorAll('.faq-item').forEach(item => {
     const question = item.querySelector('.faq-question');
     question.addEventListener('click', () => {
       item.classList.toggle('active');
     });
   });
-  // Abrir el primer elemento por defecto (opcional)
-  // document.querySelector('.faq-item').classList.add('active');
 </script>
 </body>
 </html>
