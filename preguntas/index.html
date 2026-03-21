@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mr Jeff Paraguay - Preguntas Frecuentes</title>
+<link rel="icon" type="image/jpeg" href="/favicon.jpg">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, system-ui, Arial;
+}
+
+body {
+  background: #ffffff;
+  color: #111;
+  scroll-behavior: smooth;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 6%;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.2;
+  text-align: left;
+}
+.logo span {
+  display: block;
+}
+.logo span:last-child {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+nav a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  transition: color 0.2s, transform 0.2s;
+}
+nav a:hover {
+  color: #2f80ed;
+  transform: translateY(-2px);
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  background: #2f80ed;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.btn-primary:hover {
+  background: #1a5bbf;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(47,128,237,0.3);
+}
+
+.btn-secondary {
+  background: #4da3ff;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.btn-secondary:hover {
+  background: #2f80ed;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(77,163,255,0.3);
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: #2f80ed;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 24px;
+  transition: all 0.3s ease;
+}
+.social-icon:hover {
+  background: #1a5bbf;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+/* HERO FAQ */
+.faq-hero {
+  text-align: center;
+  padding: 80px 6% 40px;
+  background: linear-gradient(135deg, #f7fbff 0%, #ffffff 100%);
+}
+.faq-hero h1 {
+  font-size: 48px;
+  font-weight: 800;
+  color: #0a2a44;
+  margin-bottom: 15px;
+}
+.faq-hero p {
+  font-size: 18px;
+  color: #4a5568;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* FAQ SECTION */
+.faq-section {
+  max-width: 1000px;
+  margin: 0 auto 80px;
+  padding: 0 20px;
+}
+.faq-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.faq-item {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.03);
+}
+.faq-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(47,128,237,0.1);
+  border-color: rgba(47,128,237,0.2);
+}
+.faq-question {
+  padding: 22px 30px;
+  background: #ffffff;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.2s;
+}
+.faq-question:hover {
+  background: #f8faff;
+}
+.faq-question h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #0a2a44;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.faq-question h3 i {
+  color: #2f80ed;
+  font-size: 1.3rem;
+}
+.faq-toggle {
+  color: #2f80ed;
+  font-size: 1.2rem;
+  transition: transform 0.3s;
+}
+.faq-item.active .faq-toggle {
+  transform: rotate(180deg);
+}
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
+  background: #f9fafc;
+  border-top: 1px solid #eef2f6;
+}
+.faq-item.active .faq-answer {
+  max-height: 300px;
+  transition: max-height 0.5s ease-in;
+}
+.faq-answer p {
+  padding: 22px 30px;
+  color: #2d3748;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+.faq-answer p i {
+  color: #2f80ed;
+  margin-right: 8px;
+}
+
+/* Botón de WhatsApp flotante (opcional) */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #25D366;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  box-shadow: 0 4px 15px rgba(37,211,102,0.4);
+  transition: all 0.3s;
+  z-index: 99;
+}
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  background: #128C7E;
+  box-shadow: 0 6px 20px rgba(37,211,102,0.5);
+}
+
+footer {
+  background: #051b30;
+  color: #9ec9ff;
+  text-align: center;
+  padding: 25px;
+  font-size: 14px;
+}
+
+@media (max-width: 900px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .logo {
+    font-size: 30px;
+    text-align: center;
+    width: 100%;
+  }
+  .logo span:last-child {
+    font-size: 24px;
+  }
+  nav {
+    justify-content: center;
+    gap: 15px;
+  }
+  nav a {
+    font-size: 14px;
+  }
+  .nav-buttons {
+    justify-content: center;
+  }
+  .faq-hero h1 {
+    font-size: 36px;
+  }
+  .faq-question h3 {
+    font-size: 1rem;
+  }
+  .faq-question {
+    padding: 18px 20px;
+  }
+  .faq-answer p {
+    padding: 18px 20px;
+  }
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    font-size: 26px;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <span>Mr Jeff</span>
+    <span>📍 Federación Rusa</span>
+  </div>
+  <nav>
+    <a href="/">Inicio</a>
+    <a href="/precios">Servicios</a>
+    <a href="/informacion">La empresa</a>
+    <a href="/preguntas" style="color:#2f80ed; font-weight:600;">Preguntas Frecuentes</a>
+  </nav>
+  <div class="nav-buttons">
+    <a href="https://www.instagram.com/mrjeff_federacionrusa/" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.facebook.com/Mrjeff.federacionrusa/" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook">
+      <i class="fab fa-facebook"></i>
+    </a>
+    <a class="btn-secondary" href="https://maps.app.goo.gl/TKWpPbmevnk2E14z7" target="_blank" rel="noopener">Ubicación</a>
+  </div>
+</header>
+
+<main>
+  <div class="faq-hero">
+    <h1>Preguntas Frecuentes</h1>
+    <p>Resolvemos tus dudas sobre nuestro servicio de lavandería</p>
+  </div>
+
+  <div class="faq-section">
+    <div class="faq-grid">
+      <!-- FAQ 1 -->
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3><i class="fas fa-question-circle"></i> ¿Realizan lavado de alfombras y cortinas a domicilio?</h3>
+          <i class="fas fa-chevron-down faq-toggle"></i>
+        </div>
+        <div class="faq-answer">
+          <p><i class="fas fa-store"></i> No, todos nuestros servicios se realizan en nuestro local. No realizamos ningún trabajo a domicilio.</p>
+        </div>
+      </div>
+
+      <!-- FAQ 2 -->
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3><i class="fas fa-tshirt"></i> ¿Realizan solo el servicio de planchado de prendas?</h3>
+          <i class="fas fa-chevron-down faq-toggle"></i>
+        </div>
+        <div class="faq-answer">
+          <p><i class="fas fa-check-circle"></i> Sí, nos traen sus prendas lavadas y nosotros te las entregamos perfectamente planchadas.</p>
+        </div>
+      </div>
+
+      <!-- FAQ 3 -->
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3><i class="fas fa-palette"></i> ¿Lavan las ropas blancas solas o con las de color?</h3>
+          <i class="fas fa-chevron-down faq-toggle"></i>
+        </div>
+        <div class="faq-answer">
+          <p><i class="fas fa-tint"></i> Se separan las prendas blancas, las de color y las oscuras para realizar el lavado por separado, garantizando el mejor cuidado.</p>
+        </div>
+      </div>
+
+      <!-- FAQ 4 -->
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3><i class="fas fa-users"></i> ¿Se mezcla mi ropa con la de otro cliente?</h3>
+          <i class="fas fa-chevron-down faq-toggle"></i>
+        </div>
+        <div class="faq-answer">
+          <p><i class="fas fa-check-double"></i> No, nunca mezclamos las ropas de distintos clientes. Cada pedido se procesa de forma independiente.</p>
+        </div>
+      </div>
+
+      <!-- FAQ 5 -->
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3><i class="fas fa-temperature-high"></i> ¿La ropa se encoge en la secadora?</h3>
+          <i class="fas fa-chevron-down faq-toggle"></i>
+        </div>
+        <div class="faq-answer">
+          <p><i class="fas fa-tag"></i> Se revisan las etiquetas de las prendas. Las prendas de algodón se secan en secadora y no se encogen; las prendas delicadas son secadas al ambiente para evitar encogimientos.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a href="https://wa.me/595991858321" target="_blank" rel="noopener" class="whatsapp-float" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+</main>
+
+<footer>Mr Jeff Federación Rusa © 2026</footer>
+
+<script>
+  // Acordeón para las preguntas frecuentes
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const question = item.querySelector('.faq-question');
+    question.addEventListener('click', () => {
+      item.classList.toggle('active');
+    });
+  });
+  // Abrir el primer elemento por defecto (opcional)
+  // document.querySelector('.faq-item').classList.add('active');
+</script>
+</body>
+</html>
